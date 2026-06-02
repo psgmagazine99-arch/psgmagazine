@@ -1203,16 +1203,13 @@
   /* ── Menu mobile ── */
   .mobile-menu-btn { display: none; }
   .mobile-only { display: none; }
-  .admin-icon { display: none; }
   .nav-forum-mobile { display: none; }
 
   @media (max-width: 760px) {
     .container { padding: 0 16px; }
     .icon-btn { width: 44px; height: 44px; }
     .nav-btn { padding-top: 14px; padding-bottom: 14px; }
-    .header-actions .btn-secondary,
-    .header-actions .btn-primary span.btn-label { display: none; }
-    .admin-icon { display: inline; }
+    .header-actions .btn-secondary { display: none; }
     .nav-forum-mobile { display: inline-block; color: var(--red); }
     .featured-title { font-size: 24px; }
     .article-full-title { font-size: 28px; }
@@ -1279,7 +1276,7 @@
         <button class="icon-btn" onclick="openSearch()" id="btn-search" title="Rechercher" aria-label="Rechercher">🔍</button>
         <button class="icon-btn" onclick="toggleTheme()" id="btn-theme" title="Mode sombre" aria-label="Changer de thème">🌙</button>
         <button class="btn-secondary" onclick="showPage('discussion')" id="btn-forum">Forum</button>
-        <button class="btn-primary" onclick="goToAdmin()" id="btn-admin"><span class="btn-label">Administration</span><span class="admin-icon">⚙️</span></button>
+        <button class="icon-btn" onclick="goToAdmin()" id="btn-admin" title="Connexion" aria-label="Connexion">👤</button>
       </div>
     </div>
     <nav class="nav-bar">
@@ -1480,8 +1477,8 @@
       <div class="login-logo">
         <div class="logo-emblem"><span class="logo-emblem-text">PSG</span></div>
       </div>
-      <h1 class="login-title">Espace Administration</h1>
-      <p class="login-subtitle" id="login-subtitle">Connexion réservée à l'éditeur du site.</p>
+      <h1 class="login-title" id="login-title">Connexion</h1>
+      <p class="login-subtitle" id="login-subtitle">Connectez-vous pour accéder à votre espace.</p>
       <div class="login-field">
         <label for="login-email" id="login-email-label">Email</label>
         <input type="email" id="login-email" autocomplete="username" placeholder="votre@email.com" />
@@ -1895,7 +1892,8 @@ const TRANSLATIONS = {
     footerCatTitle: "Catégories",
     footerInfoTitle: "Informations",
     footerForum: "Forum discussion",
-    loginSubtitle: "Connexion réservée à l'éditeur du site.",
+    loginSubtitle: "Connectez-vous pour accéder à votre espace.",
+    loginTitle: "Connexion",
     loginEmailLabel: "Email",
     loginPasswordLabel: "Mot de passe",
     loginBtn: "Se connecter",
@@ -1938,7 +1936,8 @@ const TRANSLATIONS = {
     footerCatTitle: "Categories",
     footerInfoTitle: "Information",
     footerForum: "Discussion forum",
-    loginSubtitle: "Access reserved for the site editor.",
+    loginSubtitle: "Sign in to access your space.",
+    loginTitle: "Sign in",
     loginEmailLabel: "Email",
     loginPasswordLabel: "Password",
     loginBtn: "Sign in",
@@ -2489,7 +2488,7 @@ function applyTranslations() {
     'section-label':'sectionLabel','footer-desc':'footerDesc',
     'footer-cat-title':'footerCatTitle','footer-info-title':'footerInfoTitle',
     'footer-forum':'footerForum','footer-disclaimer':'footerDisclaimer',
-    'login-subtitle':'loginSubtitle','login-email-label':'loginEmailLabel',
+    'login-subtitle':'loginSubtitle','login-title':'loginTitle','login-email-label':'loginEmailLabel',
     'login-password-label':'loginPasswordLabel','login-btn':'loginBtn','login-back':'loginBack',
     'logout-btn':'logoutBtn',
     'footer-mentions':'footerMentions','footer-privacy':'footerPrivacy',
