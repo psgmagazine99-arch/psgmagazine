@@ -994,6 +994,51 @@
     font-size: 11px; color: rgba(255,255,255,0.3);
   }
 
+  /* ── PAGE DE CONNEXION ── */
+  .login-wrap {
+    min-height: 80vh; display: flex; align-items: center; justify-content: center;
+    padding: 40px 20px;
+  }
+  .login-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 40px 32px; width: 100%; max-width: 400px;
+    box-shadow: 0 12px 48px var(--shadow); text-align: center;
+  }
+  .login-logo { display: flex; justify-content: center; margin-bottom: 20px; }
+  .login-title {
+    font-family: var(--font-serif); font-size: 24px; font-weight: 700;
+    color: var(--text); margin-bottom: 8px;
+  }
+  .login-subtitle { font-size: 13px; color: var(--muted); margin-bottom: 28px; }
+  .login-field { text-align: left; margin-bottom: 16px; }
+  .login-field label {
+    display: block; font-size: 12px; font-weight: 600; color: var(--muted);
+    margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em;
+  }
+  .login-field input {
+    width: 100%; border: 1.5px solid var(--border); border-radius: 8px;
+    padding: 12px 14px; font-size: 15px; font-family: var(--font-sans);
+    color: var(--text); background: var(--offwhite); outline: none;
+    transition: border-color 0.15s;
+  }
+  .login-field input:focus { border-color: var(--navy); }
+  .login-error {
+    color: var(--red); font-size: 13px; margin-bottom: 14px; min-height: 18px;
+    font-weight: 600;
+  }
+  .login-btn {
+    width: 100%; background: var(--red); color: #fff; border: none;
+    border-radius: 8px; padding: 14px; font-size: 15px; font-weight: 700;
+    cursor: pointer; font-family: var(--font-sans); transition: opacity 0.15s;
+  }
+  .login-btn:hover { opacity: 0.9; }
+  .login-btn:disabled { opacity: 0.6; cursor: wait; }
+  .login-back {
+    background: none; border: none; color: var(--muted); cursor: pointer;
+    font-size: 13px; margin-top: 18px; font-family: var(--font-sans);
+  }
+  .login-back:hover { color: var(--text); }
+
   /* ── PAGE LÉGALE ── */
   .legal-tabs {
     display: flex; gap: 6px; flex-wrap: wrap; margin: 24px 0 32px;
@@ -1197,6 +1242,7 @@
     .reveal { opacity: 1; transform: none; }
   }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -1233,7 +1279,7 @@
         <button class="icon-btn" onclick="openSearch()" id="btn-search" title="Rechercher" aria-label="Rechercher">🔍</button>
         <button class="icon-btn" onclick="toggleTheme()" id="btn-theme" title="Mode sombre" aria-label="Changer de thème">🌙</button>
         <button class="btn-secondary" onclick="showPage('discussion')" id="btn-forum">Forum</button>
-        <button class="btn-primary" onclick="showPage('backoffice')" id="btn-admin"><span class="btn-label">Administration</span><span class="admin-icon">⚙️</span></button>
+        <button class="btn-primary" onclick="goToAdmin()" id="btn-admin"><span class="btn-label">Administration</span><span class="admin-icon">⚙️</span></button>
       </div>
     </div>
     <nav class="nav-bar">
@@ -1426,6 +1472,32 @@
 </div>
 
 <!-- ════════════════════════════════════════════════════════ -->
+<!--  PAGE DE CONNEXION ADMIN                                 -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div class="page" id="page-login">
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="login-logo">
+        <div class="logo-emblem"><span class="logo-emblem-text">PSG</span></div>
+      </div>
+      <h1 class="login-title">Espace Administration</h1>
+      <p class="login-subtitle" id="login-subtitle">Connexion réservée à l'éditeur du site.</p>
+      <div class="login-field">
+        <label for="login-email" id="login-email-label">Email</label>
+        <input type="email" id="login-email" autocomplete="username" placeholder="votre@email.com" />
+      </div>
+      <div class="login-field">
+        <label for="login-password" id="login-password-label">Mot de passe</label>
+        <input type="password" id="login-password" autocomplete="current-password" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()" />
+      </div>
+      <div class="login-error" id="login-error"></div>
+      <button class="login-btn" id="login-btn" onclick="doLogin()">Se connecter</button>
+      <button class="login-back" onclick="showPage('home')" id="login-back">← Retour au site</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
 <!--  BACK-OFFICE                                             -->
 <!-- ════════════════════════════════════════════════════════ -->
 <div class="page" id="page-backoffice">
@@ -1433,7 +1505,10 @@
     <div class="container">
       <div class="backoffice-header-inner">
         <div class="backoffice-title">PSG<span>Magazine</span> — Admin</div>
-        <button class="btn-secondary" onclick="showPage('home')" style="color:#fff;border-color:rgba(255,255,255,0.3)">← Voir le site</button>
+        <div style="display:flex;gap:10px;align-items:center">
+          <button class="btn-secondary" onclick="showPage('home')" style="color:#fff;border-color:rgba(255,255,255,0.3)">← Voir le site</button>
+          <button class="btn-secondary" onclick="doLogout()" id="logout-btn" style="color:#fff;border-color:rgba(255,255,255,0.3)">Déconnexion</button>
+        </div>
       </div>
     </div>
   </div>
@@ -1736,6 +1811,74 @@
 
 <script>
 // ════════════════════════════════════════════════════════════
+//  AUTHENTIFICATION ADMIN (Supabase)
+// ════════════════════════════════════════════════════════════
+const SUPABASE_URL = 'https://lckeyfshsgffelugzwgv.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_YStCy-N5nkdDq7rYwFNJ-g_58bFa1LS';
+let supa = null;
+let isAdmin = false;
+
+function initSupabase() {
+  try {
+    if (window.supabase && window.supabase.createClient) {
+      supa = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    }
+  } catch (e) { console.warn('Supabase init échouée', e); }
+}
+
+// Vérifie s'il existe une session valide (utilisateur déjà connecté)
+async function checkAdminSession() {
+  if (!supa) return false;
+  try {
+    const { data } = await supa.auth.getSession();
+    isAdmin = !!(data && data.session);
+    return isAdmin;
+  } catch (e) { return false; }
+}
+
+// Connexion : appelle Supabase qui vérifie email + mot de passe sur SON serveur
+async function doLogin() {
+  const email = document.getElementById('login-email').value.trim();
+  const pwd = document.getElementById('login-password').value;
+  const errEl = document.getElementById('login-error');
+  const btn = document.getElementById('login-btn');
+  errEl.textContent = '';
+  if (!email || !pwd) { errEl.textContent = currentLang === 'en' ? 'Please fill in all fields.' : 'Veuillez remplir tous les champs.'; return; }
+  if (!supa) { errEl.textContent = currentLang === 'en' ? 'Connection service unavailable.' : 'Service de connexion indisponible.'; return; }
+  btn.disabled = true;
+  btn.textContent = currentLang === 'en' ? 'Connecting...' : 'Connexion...';
+  try {
+    const { data, error } = await supa.auth.signInWithPassword({ email, password: pwd });
+    if (error || !data.session) {
+      errEl.textContent = currentLang === 'en' ? 'Incorrect email or password.' : 'Email ou mot de passe incorrect.';
+    } else {
+      isAdmin = true;
+      document.getElementById('login-password').value = '';
+      toast(currentLang === 'en' ? '✅ Welcome!' : '✅ Bienvenue !');
+      showPage('backoffice');
+    }
+  } catch (e) {
+    errEl.textContent = currentLang === 'en' ? 'Connection error.' : 'Erreur de connexion.';
+  }
+  btn.disabled = false;
+  btn.textContent = currentLang === 'en' ? 'Sign in' : 'Se connecter';
+}
+
+async function doLogout() {
+  if (supa) { try { await supa.auth.signOut(); } catch (e) {} }
+  isAdmin = false;
+  toast(currentLang === 'en' ? 'Logged out' : 'Déconnecté');
+  showPage('home');
+}
+
+// Point d'entrée admin : vérifie la session, sinon montre la connexion
+async function goToAdmin() {
+  const ok = await checkAdminSession();
+  if (ok) { showPage('backoffice'); }
+  else { showPage('login'); }
+}
+
+// ════════════════════════════════════════════════════════════
 //  DATA
 // ════════════════════════════════════════════════════════════
 let currentLang = 'fr';
@@ -1752,6 +1895,12 @@ const TRANSLATIONS = {
     footerCatTitle: "Catégories",
     footerInfoTitle: "Informations",
     footerForum: "Forum discussion",
+    loginSubtitle: "Connexion réservée à l'éditeur du site.",
+    loginEmailLabel: "Email",
+    loginPasswordLabel: "Mot de passe",
+    loginBtn: "Se connecter",
+    loginBack: "← Retour au site",
+    logoutBtn: "Déconnexion",
     footerMentions: "Mentions légales",
     footerPrivacy: "Confidentialité (RGPD)",
     footerCookies: "Politique cookies",
@@ -1789,6 +1938,12 @@ const TRANSLATIONS = {
     footerCatTitle: "Categories",
     footerInfoTitle: "Information",
     footerForum: "Discussion forum",
+    loginSubtitle: "Access reserved for the site editor.",
+    loginEmailLabel: "Email",
+    loginPasswordLabel: "Password",
+    loginBtn: "Sign in",
+    loginBack: "← Back to site",
+    logoutBtn: "Log out",
     footerMentions: "Legal notice",
     footerPrivacy: "Privacy (GDPR)",
     footerCookies: "Cookie policy",
@@ -2334,6 +2489,9 @@ function applyTranslations() {
     'section-label':'sectionLabel','footer-desc':'footerDesc',
     'footer-cat-title':'footerCatTitle','footer-info-title':'footerInfoTitle',
     'footer-forum':'footerForum','footer-disclaimer':'footerDisclaimer',
+    'login-subtitle':'loginSubtitle','login-email-label':'loginEmailLabel',
+    'login-password-label':'loginPasswordLabel','login-btn':'loginBtn','login-back':'loginBack',
+    'logout-btn':'logoutBtn',
     'footer-mentions':'footerMentions','footer-privacy':'footerPrivacy',
     'footer-cookies-link':'footerCookies','footer-cgu':'footerCgu','footer-contact':'footerContact',
     'cookie-accept':'cookieAccept','cookie-refuse':'cookieRefuse',
@@ -2367,6 +2525,9 @@ function applyTranslations() {
 //  PAGES
 // ════════════════════════════════════════════════════════════
 function showPage(page) {
+  // Garde de sécurité : le back-office exige une session admin valide
+  if (page === 'backoffice' && !isAdmin) { showPage('login'); return; }
+
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + page).classList.add('active');
   window.scrollTo(0, 0);
@@ -3360,6 +3521,10 @@ function applyAI() {
 //  INIT
 // ════════════════════════════════════════════════════════════
 function init() {
+  // Authentification : initialise Supabase et vérifie une éventuelle session
+  initSupabase();
+  checkAdminSession();
+
   // Thème : restaure la préférence, sinon suit le système
   let savedTheme = Store.get('psgmag_theme');
   if (!savedTheme) {
