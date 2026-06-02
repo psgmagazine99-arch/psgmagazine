@@ -1,0 +1,3409 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PSG Magazine — Ici c'est Paris | Actu, transferts & analyses du Paris Saint-Germain</title>
+<meta name="description" content="Le magazine indépendant des fans du Paris Saint-Germain. Actualités vérifiées, mercato, analyses tactiques et décryptage des rumeurs par un vrai passionné.">
+<meta name="keywords" content="PSG, Paris Saint-Germain, mercato PSG, transferts PSG, actu PSG, Ligue des Champions, foot, Luis Enrique">
+<meta name="author" content="PSG Magazine">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://psgmagazine.com/">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PSG Magazine">
+<meta property="og:title" content="PSG Magazine — Ici c'est Paris">
+<meta property="og:description" content="Le magazine indépendant des fans du Paris Saint-Germain. Actu vérifiée, mercato, analyses et décryptage des rumeurs.">
+<meta property="og:url" content="https://psgmagazine.com/">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://psgmagazine.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PSG Magazine — Le magazine des fans du Paris Saint-Germain">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PSG Magazine — Ici c'est Paris">
+<meta name="twitter:description" content="Le magazine indépendant des fans du PSG. Actu vérifiée, mercato, analyses tactiques.">
+<meta name="twitter:image" content="https://psgmagazine.com/og-image.jpg">
+<meta name="twitter:image:alt" content="PSG Magazine">
+
+<!-- Schema.org : type Organisation + WebSite (mis à jour dynamiquement par article) -->
+<script type="application/ld+json" id="schema-org">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "PSG Magazine",
+  "url": "https://psgmagazine.com",
+  "description": "Le magazine indépendant des fans du Paris Saint-Germain.",
+  "knowsAbout": ["Paris Saint-Germain", "Football", "Ligue 1", "Ligue des Champions"]
+}
+</script>
+
+<!-- Theme + favicon -->
+<meta name="theme-color" content="#001B3D">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    /* Couleurs de marque (fixes) */
+    --navy: #001B3D;
+    --navy2: #002855;
+    --red: #E8001C;
+    --gold: #C9973A;
+    /* Surfaces & texte (thème clair par défaut) */
+    --white: #FFFFFF;
+    --offwhite: #F8F7F4;
+    --light: #EEECEA;
+    --muted: #7A7F92;
+    --text: #0F1523;
+    --border: #E0DDD8;
+    --surface: #FFFFFF;
+    --header-bg: #FFFFFF;
+    --shadow: rgba(0,27,61,0.10);
+    --always-white: #FFFFFF; /* texte sur fonds navy/rouge — ne change jamais */
+    --accent-text: #001B3D; /* navy utilisé comme couleur de texte/accent */
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-serif: 'Source Serif 4', Georgia, serif;
+    --font-sans: 'DM Sans', sans-serif;
+  }
+
+  /* ── MODE SOMBRE ── */
+  [data-theme="dark"] {
+    color-scheme: dark;
+    --white: #161A22;
+    --offwhite: #0E1117;
+    --light: #1E232E;
+    --muted: #8B92A5;
+    --text: #ECEEF3;
+    --border: #2A303C;
+    --surface: #161A22;
+    --header-bg: #11151C;
+    --shadow: rgba(0,0,0,0.45);
+    --accent-text: #6FA8E0; /* bleu clair lisible en mode sombre */
+  }
+  /* Fond appliqué directement sur html ET body (fiabilité navigateurs in-app iOS) */
+  [data-theme="dark"], [data-theme="dark"] body { background: #0E1117 !important; color: #ECEEF3; }
+  [data-theme="dark"] .featured-image-placeholder,
+  [data-theme="dark"] .article-card-image,
+  [data-theme="dark"] .article-image-full { opacity: 0.92; }
+  [data-theme="dark"] .email-capture { background: linear-gradient(135deg, #0A2A4D, #001B3D); }
+  /* Fonds clairs à adapter en sombre pour garder le texte lisible */
+  [data-theme="dark"] .ai-result { background: #16243A; border-color: #2A3D5C; }
+  [data-theme="dark"] .article-card:hover { background: var(--light) !important; }
+  [data-theme="dark"] .search-result:hover { background: var(--light); }
+  [data-theme="dark"] .reliability-meter { background: var(--surface); }
+  [data-theme="dark"] .toolbar-btn:hover,
+  [data-theme="dark"] .bo-btn-edit:hover { color: var(--always-white); }
+  /* Badges fiabilité & statuts : assombrir légèrement le fond clair, garder le texte coloré lisible */
+  [data-theme="dark"] .rel-confirmed { background: rgba(34,197,94,0.18); color: #4ADE80; }
+  [data-theme="dark"] .rel-watch { background: rgba(234,179,8,0.18); color: #FACC15; }
+  [data-theme="dark"] .rel-intox { background: rgba(239,68,68,0.18); color: #F87171; }
+  [data-theme="dark"] .status-published { background: rgba(34,197,94,0.18); color: #4ADE80; }
+  [data-theme="dark"] .status-draft { background: rgba(234,179,8,0.18); color: #FACC15; }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; background: var(--offwhite); }
+
+  body {
+    background: var(--offwhite);
+    color: var(--text);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  /* Focus visible pour l'accessibilité clavier */
+  *:focus-visible {
+    outline: 2px solid var(--red);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Placeholders lisibles dans les deux thèmes */
+  input::placeholder, textarea::placeholder { color: var(--muted); opacity: 0.7; }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--light); }
+  ::-webkit-scrollbar-thumb { background: var(--navy); border-radius: 3px; }
+
+  /* ── UTILITIES ── */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+  .hidden { display: none !important; }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    background: var(--navy);
+    padding: 6px 0;
+    border-bottom: 2px solid var(--red);
+  }
+  .topbar-inner {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .topbar-date {
+    font-family: var(--font-sans);
+    font-size: 11px; color: rgba(255,255,255,0.5);
+    letter-spacing: 0.15em; text-transform: uppercase;
+  }
+  .topbar-langs { display: flex; gap: 4px; }
+  .lang-btn {
+    background: none; border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.6); font-size: 10px; font-weight: 600;
+    padding: 2px 8px; cursor: pointer; border-radius: 2px;
+    font-family: var(--font-sans); letter-spacing: 0.1em;
+    transition: all 0.15s;
+  }
+  .lang-btn.active, .lang-btn:hover {
+    background: var(--red); border-color: var(--red); color: #fff;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100;
+  }
+  .header-main {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0;
+  }
+  .site-logo {
+    display: flex; align-items: center; gap: 14px; cursor: pointer;
+    text-decoration: none;
+  }
+  .logo-emblem {
+    width: 44px; height: 44px;
+    background: var(--navy);
+    border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .logo-emblem::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 40%; background: var(--red);
+  }
+  .logo-emblem-text {
+    position: relative; z-index: 1;
+    font-family: var(--font-display);
+    font-size: 18px; color: var(--always-white); letter-spacing: 1px;
+  }
+  .logo-text { line-height: 1; }
+  .logo-name {
+    font-family: var(--font-display);
+    font-size: 28px; letter-spacing: 2px;
+    color: var(--accent-text);
+    line-height: 1;
+  }
+  .logo-name span { color: var(--red); }
+  .logo-tagline {
+    font-size: 9px; color: var(--muted);
+    letter-spacing: 0.2em; text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .header-actions { display: flex; align-items: center; gap: 12px; }
+  .btn-primary {
+    background: var(--navy); color: var(--always-white);
+    border: none; border-radius: 4px;
+    padding: 9px 20px; font-size: 13px; font-weight: 600;
+    cursor: pointer; font-family: var(--font-sans);
+    letter-spacing: 0.03em; transition: background 0.15s;
+  }
+  .btn-primary:hover { background: var(--red); }
+  .btn-secondary {
+    background: none; color: var(--accent-text);
+    border: 1.5px solid var(--border); border-radius: 4px;
+    padding: 8px 18px; font-size: 13px; font-weight: 500;
+    cursor: pointer; font-family: var(--font-sans);
+    transition: all 0.15s;
+  }
+  .btn-secondary:hover { border-color: var(--accent-text); }
+
+  /* ── NAV ── */
+  .nav-bar {
+    border-top: 1px solid var(--border);
+    overflow-x: auto;
+  }
+  .nav-inner {
+    display: flex; gap: 0;
+  }
+  .nav-btn {
+    background: none; border: none;
+    font-family: var(--font-sans); font-size: 12px; font-weight: 600;
+    color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 12px 18px; cursor: pointer; white-space: nowrap;
+    border-bottom: 2px solid transparent; transition: all 0.15s;
+    position: relative; top: 1px;
+  }
+  .nav-btn:hover, .nav-btn.active {
+    color: var(--accent-text); border-bottom-color: var(--red);
+  }
+
+  /* ── PAGES ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── HOME PAGE ── */
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Featured */
+  .featured-article {
+    border-right: 1px solid var(--border);
+    padding: 36px 36px 36px 0;
+    cursor: pointer;
+  }
+  .featured-article:hover .featured-title { color: var(--red); }
+  .featured-eyebrow {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 16px;
+  }
+  .category-badge {
+    display: inline-block;
+    font-family: var(--font-sans); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 2px;
+  }
+  .cat-transferts { background: var(--navy); color: #fff; }
+  .cat-matchs { background: var(--red); color: #fff; }
+  .cat-ldc { background: var(--gold); color: #fff; }
+  .cat-mercato { background: #2D5A27; color: #fff; }
+  .cat-rumeurs { background: #5A2D72; color: #fff; }
+  .cat-formation { background: #1A4A6B; color: #fff; }
+  .cat-analyse { background: #333; color: #fff; }
+
+  /* ── RELIABILITY BADGES (le différenciateur) ── */
+  .reliability-badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-family: var(--font-sans); font-size: 11px; font-weight: 700;
+    padding: 3px 10px; border-radius: 20px;
+    letter-spacing: 0.02em;
+  }
+  .reliability-badge .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+  }
+  .rel-confirmed { background: #E3F5E9; color: #15803D; }
+  .rel-confirmed .dot { background: #22C55E; }
+  .rel-watch { background: #FEF6E0; color: #A16207; }
+  .rel-watch .dot { background: #EAB308; }
+  .rel-intox { background: #FCE8E8; color: #B91C1C; }
+  .rel-intox .dot { background: #EF4444; }
+  .reliability-source {
+    font-size: 12px; color: var(--muted); font-style: italic;
+    display: flex; align-items: center; gap: 6px; margin-top: 4px;
+  }
+  .reliability-source::before { content: '🔗'; font-style: normal; }
+
+  /* Reliability meter in article */
+  .reliability-meter {
+    background: var(--white); border: 1px solid var(--border);
+    border-left: 4px solid var(--navy); border-radius: 4px;
+    padding: 16px 20px; margin: 0 0 32px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .reliability-meter-icon { font-size: 28px; }
+  .reliability-meter-body { flex: 1; }
+  .reliability-meter-label {
+    font-size: 10px; font-weight: 700; color: var(--muted);
+    letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 4px;
+  }
+  .reliability-meter-verdict { font-size: 15px; font-weight: 700; color: var(--text); }
+  .reliability-meter-source { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* ── EMAIL CAPTURE ── */
+  .email-capture {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 36px 40px;
+    margin: 0 0 48px;
+    position: relative; overflow: hidden;
+  }
+  .email-capture::before {
+    content: ''; position: absolute; top: 0; right: 0;
+    width: 200px; height: 100%;
+    background: repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(232,0,28,0.08) 30px, rgba(232,0,28,0.08) 60px);
+  }
+  .email-capture-inner { position: relative; z-index: 1; max-width: 600px; }
+  .email-capture-eyebrow {
+    font-size: 11px; font-weight: 700; color: var(--gold);
+    letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 10px;
+  }
+  .email-capture-title {
+    font-family: var(--font-serif); font-size: 26px; font-weight: 700;
+    color: var(--always-white); line-height: 1.3; margin-bottom: 10px;
+  }
+  .email-capture-desc {
+    font-size: 14px; color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;
+  }
+  .email-capture-form { display: flex; gap: 10px; }
+  .email-capture-input {
+    flex: 1; border: none; border-radius: 4px;
+    padding: 14px 18px; font-size: 14px; font-family: var(--font-sans);
+    outline: none;
+  }
+  .email-capture-btn {
+    background: var(--red); color: var(--always-white);
+    border: none; border-radius: 4px; padding: 14px 28px;
+    font-size: 14px; font-weight: 700; cursor: pointer;
+    font-family: var(--font-sans); white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .email-capture-btn:hover { background: #C0001A; }
+  .email-capture-privacy { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 12px; }
+
+  /* ── SHARE BUTTONS ── */
+  .share-bar {
+    display: flex; align-items: center; gap: 10px;
+    padding: 20px 0; margin: 32px 0;
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+  }
+  .share-label {
+    font-size: 11px; font-weight: 700; color: var(--muted);
+    letter-spacing: 0.1em; text-transform: uppercase; margin-right: 4px;
+  }
+  .share-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 8px 14px; font-size: 13px; font-weight: 600;
+    cursor: pointer; background: var(--white); color: var(--text);
+    font-family: var(--font-sans); transition: all 0.15s;
+  }
+  .share-btn:hover { border-color: var(--accent-text); background: var(--offwhite); }
+  .share-btn.x:hover { background: #000; color: #fff; border-color: #000; }
+  .share-btn.wa:hover { background: #25D366; color: #fff; border-color: #25D366; }
+  .share-btn.copy:hover { background: var(--navy); color: #fff; border-color: var(--accent-text); }
+
+  /* ── AD SLOT (AdSense ready) ── */
+  .ad-slot {
+    background: var(--light);
+    border: 1px dashed var(--border);
+    border-radius: 4px;
+    min-height: 90px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 12px; letter-spacing: 0.1em;
+    text-transform: uppercase; margin: 32px 0;
+  }
+  .featured-badge {
+    font-size: 10px; color: var(--muted); letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .featured-image-placeholder {
+    width: 100%; aspect-ratio: 16/9;
+    background: linear-gradient(135deg, var(--navy) 0%, #003580 50%, var(--red) 100%);
+    border-radius: 4px; margin-bottom: 20px;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .featured-image-placeholder::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      45deg, transparent, transparent 40px,
+      rgba(255,255,255,0.03) 40px, rgba(255,255,255,0.03) 80px
+    );
+  }
+  .img-placeholder-text {
+    font-family: var(--font-display);
+    font-size: 64px; color: rgba(255,255,255,0.15); letter-spacing: 4px;
+  }
+  .featured-title {
+    font-family: var(--font-serif);
+    font-size: 32px; font-weight: 700; line-height: 1.25;
+    color: var(--text); margin-bottom: 14px;
+    transition: color 0.15s;
+  }
+  .featured-excerpt {
+    font-family: var(--font-serif);
+    font-size: 16px; color: var(--text); line-height: 1.7;
+    margin-bottom: 18px; font-style: italic;
+  }
+  .article-meta {
+    font-size: 12px; color: var(--muted);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .article-meta strong { color: var(--accent-text); font-weight: 600; }
+  .meta-dot { width: 3px; height: 3px; background: var(--muted); border-radius: 50%; }
+
+  /* Sidebar */
+  .sidebar { padding: 36px 0 36px 32px; }
+  .sidebar-title {
+    font-family: var(--font-sans); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 20px; padding-bottom: 10px;
+    border-bottom: 2px solid var(--navy);
+    display: inline-block;
+  }
+  .sidebar-article {
+    display: flex; gap: 14px; padding: 16px 0;
+    border-bottom: 1px solid var(--border); cursor: pointer;
+  }
+  .sidebar-article:last-child { border-bottom: none; }
+  .sidebar-article:hover .sidebar-article-title { color: var(--red); }
+  .sidebar-num {
+    font-family: var(--font-display);
+    font-size: 28px; color: var(--border); line-height: 1;
+    min-width: 32px;
+  }
+  .sidebar-article-body { flex: 1; }
+  .sidebar-article-title {
+    font-family: var(--font-serif);
+    font-size: 15px; font-weight: 600; line-height: 1.4;
+    color: var(--text); margin-bottom: 6px; transition: color 0.15s;
+  }
+  .sidebar-article-meta {
+    font-size: 11px; color: var(--muted);
+  }
+
+  /* Article grid */
+  .section-header {
+    display: flex; align-items: center; gap: 16px;
+    padding: 32px 0 20px;
+  }
+  .section-header-title {
+    font-family: var(--font-sans); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+    white-space: nowrap;
+  }
+  .section-line { flex: 1; height: 1px; background: var(--border); }
+
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+  .article-card {
+    background: var(--white); padding: 24px;
+    cursor: pointer; transition: background 0.15s;
+  }
+  .article-card:hover { background: #FAFAF8; }
+  .article-card:hover .article-card-title { color: var(--red); }
+  .article-card-image {
+    width: 100%; aspect-ratio: 16/10;
+    background: linear-gradient(135deg, var(--navy), #003580);
+    border-radius: 3px; margin-bottom: 14px;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .article-card-image-text {
+    font-family: var(--font-display);
+    font-size: 32px; color: rgba(255,255,255,0.2);
+  }
+  .article-card-title {
+    font-family: var(--font-serif);
+    font-size: 17px; font-weight: 600; line-height: 1.4;
+    color: var(--text); margin: 10px 0 8px;
+    transition: color 0.15s;
+  }
+  .article-card-excerpt {
+    font-size: 13px; color: var(--muted); line-height: 1.6;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+    overflow: hidden; margin-bottom: 14px;
+  }
+
+  /* ── ARTICLE PAGE ── */
+  .article-page { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+  .article-back {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 13px; color: var(--muted); cursor: pointer;
+    margin-bottom: 32px; background: none; border: none;
+    font-family: var(--font-sans); transition: color 0.15s;
+  }
+  .article-back:hover { color: var(--accent-text); }
+  .article-back::before { content: '←'; }
+  .article-full-title {
+    font-family: var(--font-serif);
+    font-size: 38px; font-weight: 700; line-height: 1.2;
+    color: var(--text); margin: 16px 0 20px;
+  }
+  .article-full-meta {
+    display: flex; align-items: center; gap: 12px;
+    padding-bottom: 24px; border-bottom: 2px solid var(--navy);
+    margin-bottom: 28px;
+  }
+  .author-avatar {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--navy); display: flex; align-items: center;
+    justify-content: center; font-size: 14px; font-weight: 700;
+    color: #fff; font-family: var(--font-sans);
+  }
+  .article-full-body {
+    font-family: var(--font-serif);
+    font-size: 18px; line-height: 1.85; color: var(--text);
+  }
+  .article-full-body p { margin-bottom: 24px; }
+  .article-full-body p:first-child::first-letter {
+    float: left; font-family: var(--font-display);
+    font-size: 72px; line-height: 0.85; margin: 8px 12px 0 0;
+    color: var(--red);
+  }
+  .article-image-full {
+    width: 100%; aspect-ratio: 16/9;
+    background: linear-gradient(135deg, var(--navy), #003580);
+    border-radius: 4px; margin-bottom: 32px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .article-image-full-text {
+    font-family: var(--font-display);
+    font-size: 80px; color: rgba(255,255,255,0.15); letter-spacing: 6px;
+  }
+
+  /* ── COMMENTS ── */
+  .comments-section {
+    max-width: 720px; margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+  .comments-header {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 24px; padding-top: 32px;
+    border-top: 1px solid var(--border);
+  }
+  .comments-title {
+    font-family: var(--font-sans); font-size: 11px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+    white-space: nowrap;
+  }
+  .comment-form {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 4px; padding: 20px; margin-bottom: 24px;
+  }
+  .comment-form-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;
+  }
+  .form-input {
+    width: 100%; border: 1px solid var(--border); border-radius: 4px;
+    padding: 10px 14px; font-size: 14px; font-family: var(--font-sans);
+    color: var(--text); background: var(--offwhite); outline: none;
+    transition: border-color 0.15s;
+  }
+  .form-input:focus { border-color: var(--accent-text); }
+  .form-textarea {
+    width: 100%; border: 1px solid var(--border); border-radius: 4px;
+    padding: 10px 14px; font-size: 14px; font-family: var(--font-sans);
+    color: var(--text); background: var(--offwhite); resize: vertical;
+    min-height: 100px; outline: none; transition: border-color 0.15s;
+    margin-bottom: 12px;
+  }
+  .form-textarea:focus { border-color: var(--accent-text); }
+  .moderation-note {
+    font-size: 11px; color: var(--muted); margin-bottom: 12px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .comment-item {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 4px; padding: 18px 20px; margin-bottom: 12px;
+  }
+  .comment-header {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+  }
+  .comment-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--navy); display: flex; align-items: center;
+    justify-content: center; font-size: 12px; font-weight: 700;
+    color: #fff; font-family: var(--font-sans); flex-shrink: 0;
+  }
+  .comment-author { font-size: 13px; font-weight: 600; color: var(--text); }
+  .comment-date { font-size: 11px; color: var(--muted); margin-left: auto; }
+  .comment-body { font-size: 14px; line-height: 1.65; color: var(--text); }
+  .comment-body.moderated {
+    color: var(--muted); font-style: italic;
+  }
+
+  /* ── DISCUSSION PAGE ── */
+  .discussion-page { padding: 36px 0 80px; }
+  .discussion-hero {
+    background: var(--navy); padding: 48px 0; margin-bottom: 36px;
+  }
+  .discussion-hero-inner {
+    max-width: 700px;
+  }
+  .discussion-hero h1 {
+    font-family: var(--font-display);
+    font-size: 52px; color: var(--always-white); letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+  .discussion-hero h1 span { color: var(--red); }
+  .discussion-hero p {
+    font-size: 15px; color: rgba(255,255,255,0.6);
+    font-family: var(--font-sans);
+  }
+  .discussion-grid {
+    display: grid; grid-template-columns: 1fr 300px; gap: 32px;
+  }
+  .new-thread-form {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 4px; padding: 24px; margin-bottom: 24px;
+  }
+  .new-thread-title {
+    font-family: var(--font-sans); font-size: 11px; font-weight: 700;
+    letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .thread-item {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 4px; padding: 20px; margin-bottom: 12px;
+    cursor: pointer; transition: border-color 0.15s;
+  }
+  .thread-item:hover { border-color: var(--accent-text); }
+  .thread-item-header {
+    display: flex; align-items: flex-start;
+    justify-content: space-between; gap: 12px;
+    margin-bottom: 8px;
+  }
+  .thread-item-title {
+    font-family: var(--font-serif); font-size: 16px;
+    font-weight: 600; color: var(--text); line-height: 1.4;
+  }
+  .thread-replies {
+    font-size: 11px; color: var(--muted);
+    white-space: nowrap; display: flex; align-items: center; gap: 4px;
+  }
+  .thread-item-excerpt {
+    font-size: 13px; color: var(--muted); line-height: 1.6;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden; margin-bottom: 10px;
+  }
+  .thread-item-footer {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .thread-translate-btn {
+    background: none; border: 1px solid var(--border); border-radius: 6px;
+    padding: 4px 10px; font-size: 11px; font-weight: 600; cursor: pointer;
+    color: var(--accent-text); font-family: var(--font-sans); white-space: nowrap;
+    transition: all 0.15s;
+  }
+  .thread-translate-btn:hover { background: var(--navy); color: var(--always-white); border-color: var(--navy); }
+  .thread-translate-btn:disabled { opacity: 0.6; cursor: wait; }
+  .thread-translation:empty { display: none; }
+  .thread-translation-inner {
+    margin-top: 12px; padding: 12px 14px;
+    background: var(--light); border-left: 3px solid var(--gold);
+    border-radius: 4px; font-size: 13px; line-height: 1.6; color: var(--text);
+  }
+  .thread-translation-label {
+    font-size: 10px; font-weight: 700; color: var(--muted);
+    letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px;
+  }
+
+  /* Discussion sidebar */
+  .discussion-sidebar-card {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 4px; padding: 20px; margin-bottom: 16px;
+  }
+  .discussion-sidebar-title {
+    font-family: var(--font-sans); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 14px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--navy);
+    display: inline-block;
+  }
+  .rules-list {
+    list-style: none; font-size: 13px; color: var(--text);
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .rules-list li {
+    display: flex; align-items: flex-start; gap: 8px; line-height: 1.5;
+  }
+  .rules-list li::before {
+    content: '✓'; color: var(--red); font-weight: 700;
+    flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* ── BACK-OFFICE ── */
+  .backoffice-page { min-height: 100vh; background: var(--offwhite); }
+  .backoffice-header {
+    background: var(--navy); padding: 16px 0;
+    border-bottom: 3px solid var(--red);
+  }
+  .backoffice-header-inner {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .backoffice-title {
+    font-family: var(--font-display);
+    font-size: 22px; color: var(--always-white); letter-spacing: 2px;
+  }
+  .backoffice-title span { color: var(--red); }
+
+  .backoffice-layout {
+    display: grid; grid-template-columns: 260px 1fr;
+    min-height: calc(100vh - 60px);
+  }
+  .backoffice-sidebar {
+    background: var(--white); border-right: 1px solid var(--border);
+    padding: 24px 0;
+  }
+  .backoffice-nav-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 11px 20px; cursor: pointer; font-size: 14px;
+    font-weight: 500; color: var(--muted); transition: all 0.15s;
+    border-left: 3px solid transparent;
+  }
+  .backoffice-nav-item:hover { color: var(--accent-text); background: var(--offwhite); }
+  .backoffice-nav-item.active {
+    color: var(--accent-text); background: var(--offwhite);
+    border-left-color: var(--red);
+  }
+  .backoffice-nav-icon { font-size: 16px; }
+
+  .backoffice-content { padding: 32px 36px; overflow-y: auto; }
+
+  /* Articles list in backoffice */
+  .bo-articles-table {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 4px; overflow: hidden;
+  }
+  .bo-table-header {
+    display: grid; grid-template-columns: 1fr 120px 100px 80px 90px;
+    padding: 12px 20px; background: var(--offwhite);
+    border-bottom: 1px solid var(--border);
+    font-size: 11px; font-weight: 700; color: var(--muted);
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .bo-table-row {
+    display: grid; grid-template-columns: 1fr 120px 100px 80px 90px;
+    padding: 16px 20px; border-bottom: 1px solid var(--border);
+    align-items: center; transition: background 0.15s;
+  }
+  .bo-table-row:last-child { border-bottom: none; }
+  .bo-table-row:hover { background: var(--offwhite); }
+  .bo-article-title-cell {
+    font-family: var(--font-serif); font-size: 14px;
+    font-weight: 600; color: var(--text);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .bo-cell { font-size: 12px; color: var(--muted); }
+  .status-badge {
+    display: inline-block; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 2px;
+  }
+  .status-published { background: #D4F0DC; color: #1A6B33; }
+  .status-draft { background: #FFF0D4; color: #6B4A1A; }
+  .bo-actions { display: flex; gap: 6px; }
+  .bo-btn {
+    background: none; border: 1px solid var(--border);
+    border-radius: 3px; padding: 4px 10px; font-size: 11px;
+    cursor: pointer; font-family: var(--font-sans);
+    font-weight: 600; transition: all 0.15s;
+  }
+  .bo-btn-edit { color: var(--accent-text); }
+  .bo-btn-edit:hover { background: var(--navy); color: #fff; border-color: var(--accent-text); }
+  .bo-btn-delete { color: var(--red); border-color: #fcc; }
+  .bo-btn-delete:hover { background: var(--red); color: #fff; border-color: var(--red); }
+
+  /* ── EDITOR ── */
+  .editor-layout {
+    display: grid; grid-template-columns: 1fr 320px;
+    gap: 24px; align-items: start;
+  }
+  .editor-main { background: var(--white); border: 1px solid var(--border); border-radius: 4px; }
+  .editor-toolbar {
+    display: flex; align-items: center; gap: 8px; padding: 12px 16px;
+    border-bottom: 1px solid var(--border); flex-wrap: wrap;
+  }
+  .toolbar-btn {
+    background: none; border: 1px solid var(--border);
+    border-radius: 3px; padding: 5px 10px; font-size: 12px;
+    font-weight: 600; cursor: pointer; color: var(--muted);
+    font-family: var(--font-sans); transition: all 0.15s;
+  }
+  .toolbar-btn:hover { background: var(--navy); color: #fff; border-color: var(--accent-text); }
+  .editor-title-input {
+    width: 100%; border: none; outline: none; padding: 24px 24px 0;
+    font-family: var(--font-serif); font-size: 28px; font-weight: 700;
+    color: var(--text); background: transparent; resize: none;
+    line-height: 1.3;
+  }
+  .editor-title-input::placeholder { color: var(--muted); opacity: 0.7; }
+  .editor-body-input {
+    width: 100%; border: none; outline: none; padding: 16px 24px 24px;
+    font-family: var(--font-serif); font-size: 17px; line-height: 1.8;
+    color: var(--text); background: transparent; resize: none;
+    min-height: 400px;
+  }
+  .editor-body-input::placeholder { color: var(--muted); opacity: 0.7; }
+
+  /* AI Panel */
+  .ai-panel {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 4px; overflow: hidden; position: sticky; top: 80px;
+  }
+  .ai-panel-header {
+    background: var(--navy); padding: 16px 18px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .ai-panel-icon {
+    width: 28px; height: 28px; background: var(--red); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+  }
+  .ai-panel-title {
+    font-family: var(--font-display); font-size: 18px;
+    color: var(--always-white); letter-spacing: 1px;
+  }
+  .ai-panel-sub { font-size: 10px; color: rgba(255,255,255,0.5); margin-top: 1px; }
+  .ai-modes {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px; padding: 16px;
+  }
+  .ai-mode-btn {
+    background: var(--offwhite); border: 1.5px solid var(--border);
+    border-radius: 4px; padding: 10px 8px; cursor: pointer;
+    text-align: left; transition: all 0.15s;
+    font-family: var(--font-sans);
+  }
+  .ai-mode-btn:hover, .ai-mode-btn.active {
+    background: var(--navy); border-color: var(--accent-text);
+  }
+  .ai-mode-btn:hover .ai-mode-label,
+  .ai-mode-btn.active .ai-mode-label { color: var(--always-white); }
+  .ai-mode-btn:hover .ai-mode-desc,
+  .ai-mode-btn.active .ai-mode-desc { color: rgba(255,255,255,0.6); }
+  .ai-mode-emoji { font-size: 18px; margin-bottom: 4px; display: block; }
+  .ai-mode-label { font-size: 12px; font-weight: 700; color: var(--text); display: block; }
+  .ai-mode-desc { font-size: 10px; color: var(--muted); display: block; margin-top: 2px; }
+  .ai-prompt-area { padding: 0 16px; }
+  .ai-prompt-input {
+    width: 100%; border: 1.5px solid var(--border); border-radius: 4px;
+    padding: 10px 12px; font-size: 13px; font-family: var(--font-sans);
+    color: var(--text); background: var(--offwhite); resize: none;
+    min-height: 80px; outline: none; transition: border-color 0.15s;
+  }
+  .ai-prompt-input:focus { border-color: var(--accent-text); }
+  .ai-run-btn {
+    width: 100%; margin-top: 10px; background: var(--red);
+    color: var(--always-white); border: none; border-radius: 4px;
+    padding: 12px; font-size: 13px; font-weight: 700;
+    cursor: pointer; font-family: var(--font-sans);
+    letter-spacing: 0.05em; transition: background 0.15s;
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+  }
+  .ai-run-btn:hover { background: #C0001A; }
+  .ai-run-btn:disabled { background: var(--muted); cursor: not-allowed; }
+  .ai-result {
+    margin: 12px 16px 16px;
+    background: #F0F5FF; border: 1px solid #C5D5F0;
+    border-radius: 4px; padding: 14px;
+    font-size: 13px; line-height: 1.7; color: var(--text);
+    display: none;
+  }
+  .ai-result.visible { display: block; }
+  .ai-apply-btn {
+    width: 100%; margin-top: 8px; background: var(--navy);
+    color: var(--always-white); border: none; border-radius: 4px;
+    padding: 9px; font-size: 12px; font-weight: 700;
+    cursor: pointer; font-family: var(--font-sans); transition: background 0.15s;
+  }
+  .ai-apply-btn:hover { background: #002255; }
+
+  /* Editor metadata */
+  .editor-meta { padding: 16px; border-top: 1px solid var(--border); }
+  .editor-meta-title {
+    font-size: 10px; font-weight: 700; color: var(--muted);
+    letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px;
+  }
+  .meta-field { margin-bottom: 10px; }
+  .meta-label { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+
+  /* Zone d'import d'image */
+  .image-upload-zone {
+    border: 2px dashed var(--border); border-radius: 8px;
+    cursor: pointer; overflow: hidden; transition: border-color 0.15s;
+    background: var(--offwhite);
+  }
+  .image-upload-zone:hover { border-color: var(--navy); }
+  .image-upload-empty {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 6px; padding: 24px 12px; color: var(--muted); font-size: 12px; text-align: center;
+  }
+  .image-preview { width: 100%; display: block; max-height: 160px; object-fit: cover; }
+  .meta-select, .meta-input-small {
+    width: 100%; border: 1px solid var(--border); border-radius: 3px;
+    padding: 7px 10px; font-size: 13px; font-family: var(--font-sans);
+    color: var(--text); background: var(--offwhite); outline: none;
+  }
+  .meta-select:focus, .meta-input-small:focus { border-color: var(--accent-text); }
+  .publish-actions {
+    padding: 16px; border-top: 1px solid var(--border);
+    display: flex; flex-direction: column; gap: 8px;
+  }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed; bottom: 24px; right: 24px;
+    background: var(--navy); color: var(--always-white);
+    padding: 12px 20px; border-radius: 4px;
+    font-size: 13px; font-weight: 600;
+    font-family: var(--font-sans);
+    box-shadow: 0 8px 32px rgba(0,27,61,0.25);
+    transform: translateY(80px); opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy); padding: 40px 0 20px;
+    border-top: 3px solid var(--red);
+  }
+  .footer-inner {
+    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px; margin-bottom: 32px;
+  }
+  .footer-logo-name {
+    font-family: var(--font-display);
+    font-size: 32px; color: var(--always-white); letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .footer-logo-name span { color: var(--red); }
+  .footer-desc {
+    font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.6;
+  }
+  .footer-col-title {
+    font-family: var(--font-sans); font-size: 10px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); margin-bottom: 14px;
+  }
+  .footer-links { display: flex; flex-direction: column; gap: 8px; }
+  .footer-link {
+    font-size: 13px; color: rgba(255,255,255,0.6);
+    cursor: pointer; transition: color 0.15s; background: none; border: none;
+    font-family: var(--font-sans); text-align: left;
+  }
+  .footer-link:hover { color: var(--red); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-bottom-text { font-size: 11px; color: rgba(255,255,255,0.3); }
+  .footer-disclaimer {
+    font-size: 11px; color: rgba(255,255,255,0.3);
+  }
+
+  /* ── PAGE LÉGALE ── */
+  .legal-tabs {
+    display: flex; gap: 6px; flex-wrap: wrap; margin: 24px 0 32px;
+    border-bottom: 1px solid var(--border); padding-bottom: 16px;
+  }
+  .legal-tab {
+    background: var(--light); border: 1px solid var(--border); border-radius: 6px;
+    padding: 8px 16px; font-size: 13px; font-weight: 600; cursor: pointer;
+    color: var(--text); font-family: var(--font-sans); transition: all 0.15s;
+  }
+  .legal-tab:hover { border-color: var(--navy); }
+  .legal-tab.active { background: var(--navy); color: var(--always-white); border-color: var(--navy); }
+  .legal-content { font-size: 15px; line-height: 1.75; color: var(--text); }
+  .legal-content h1 { font-family: var(--font-serif); font-size: 28px; margin-bottom: 8px; }
+  .legal-content h2 {
+    font-family: var(--font-serif); font-size: 19px; margin: 28px 0 10px;
+    padding-top: 20px; border-top: 1px solid var(--border);
+  }
+  .legal-content p { margin-bottom: 14px; }
+  .legal-content ul { margin: 0 0 14px 20px; }
+  .legal-content li { margin-bottom: 6px; }
+  .legal-updated { font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+  .legal-content a { color: var(--accent-text); }
+  .legal-highlight {
+    background: var(--light); border-left: 3px solid var(--gold);
+    padding: 12px 16px; border-radius: 4px; margin-bottom: 16px; font-size: 14px;
+  }
+
+  /* ── BANDEAU COOKIES ── */
+  .cookie-banner {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 400;
+    background: var(--navy); color: var(--always-white);
+    padding: 18px 24px; box-shadow: 0 -4px 24px rgba(0,0,0,0.25);
+    display: none; align-items: center; gap: 20px; flex-wrap: wrap;
+    justify-content: center;
+    border-top: 3px solid var(--gold);
+  }
+  .cookie-banner.show { display: flex; }
+  .cookie-text { font-size: 13px; line-height: 1.5; max-width: 640px; opacity: 0.92; }
+  .cookie-text a { color: var(--gold); cursor: pointer; text-decoration: underline; }
+  .cookie-actions { display: flex; gap: 10px; flex-shrink: 0; }
+  .cookie-btn {
+    border: none; border-radius: 6px; padding: 10px 20px; font-size: 13px;
+    font-weight: 700; cursor: pointer; font-family: var(--font-sans);
+    transition: opacity 0.15s; white-space: nowrap;
+  }
+  .cookie-btn-accept { background: var(--red); color: #fff; }
+  .cookie-btn-refuse { background: rgba(255,255,255,0.12); color: #fff; }
+  .cookie-btn:hover { opacity: 0.85; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .home-grid { grid-template-columns: 1fr; }
+    .featured-article { border-right: none; border-bottom: 1px solid var(--border); padding: 24px 0; }
+    .sidebar { padding: 24px 0; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .discussion-grid { grid-template-columns: 1fr; }
+    .editor-layout { grid-template-columns: 1fr; }
+    .backoffice-layout { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+  }
+
+  /* ════════════════════════════════════════════════════════
+     AMÉLIORATIONS UX
+     ════════════════════════════════════════════════════════ */
+
+  /* ── Barre de progression de lecture ── */
+  .reading-progress {
+    position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+    background: linear-gradient(90deg, var(--red), var(--gold));
+    z-index: 200; transition: width 0.1s linear;
+  }
+
+  /* ── Boutons d'icône header (thème, recherche) ── */
+  .icon-btn {
+    width: 38px; height: 38px; border-radius: 8px;
+    border: 1.5px solid var(--border); background: var(--surface);
+    cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+    font-size: 17px; color: var(--text); transition: all 0.15s; flex-shrink: 0;
+  }
+  .icon-btn:hover { border-color: var(--accent-text); background: var(--light); }
+
+  /* ── Recherche ── */
+  .search-overlay {
+    position: fixed; inset: 0; background: rgba(0,10,25,0.55);
+    backdrop-filter: blur(4px); z-index: 300;
+    display: none; align-items: flex-start; justify-content: center;
+    padding-top: 12vh;
+  }
+  .search-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
+  .search-box {
+    background: var(--surface); border-radius: 14px; width: 92%; max-width: 620px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.4); overflow: hidden;
+  }
+  .search-input-wrap { display: flex; align-items: center; gap: 12px; padding: 20px 24px; border-bottom: 1px solid var(--border); }
+  .search-input {
+    flex: 1; border: none; outline: none; background: transparent;
+    font-size: 18px; font-family: var(--font-sans); color: var(--text);
+  }
+  .search-results { max-height: 50vh; overflow-y: auto; }
+  .search-result {
+    padding: 14px 24px; cursor: pointer; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 12px; transition: background 0.12s;
+  }
+  .search-result:hover { background: var(--light); }
+  .search-result-title { font-family: var(--font-serif); font-size: 15px; font-weight: 600; color: var(--text); }
+  .search-result-cat { font-size: 11px; color: var(--muted); }
+  .search-empty { padding: 32px 24px; text-align: center; color: var(--muted); font-size: 14px; }
+  .search-hint { padding: 10px 24px; font-size: 11px; color: var(--muted); background: var(--light); }
+
+  /* ── Temps de lecture & badges méta ── */
+  .read-time {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 12px; color: var(--muted);
+  }
+
+  /* ── Bouton favori ── */
+  .bookmark-btn {
+    background: none; border: none; cursor: pointer; font-size: 18px;
+    color: var(--muted); transition: transform 0.15s, color 0.15s; line-height: 1;
+  }
+  .bookmark-btn:hover { transform: scale(1.2); color: var(--gold); }
+  .bookmark-btn.saved { color: var(--gold); }
+
+  /* ── Articles similaires ── */
+  .related-section { max-width: 720px; margin: 0 auto; padding: 8px 24px 60px; }
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .related-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px; cursor: pointer; transition: all 0.15s;
+  }
+  .related-card:hover { border-color: var(--accent-text); transform: translateY(-2px); box-shadow: 0 8px 24px var(--shadow); }
+  .related-card-title { font-family: var(--font-serif); font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.4; margin-top: 8px; }
+
+  /* ── Bouton retour en haut ── */
+  .back-to-top {
+    position: fixed; bottom: 24px; right: 24px;
+    width: 46px; height: 46px; border-radius: 50%;
+    background: var(--navy); color: #fff; border: 2px solid var(--gold);
+    cursor: pointer; font-size: 18px; z-index: 150;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transform: translateY(20px);
+    transition: all 0.25s ease; box-shadow: 0 6px 20px rgba(0,27,61,0.3);
+  }
+  .back-to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+  .back-to-top:hover { background: var(--red); }
+
+  /* ── Animation d'apparition au scroll ── */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  /* ── Badge "tendance" ── */
+  .trending-badge {
+    display: inline-flex; align-items: center; gap: 3px;
+    font-size: 10px; font-weight: 700; color: var(--red);
+    letter-spacing: 0.05em;
+  }
+  .view-count { font-size: 11px; color: var(--muted); display: inline-flex; align-items: center; gap: 4px; }
+
+  /* ── Menu mobile ── */
+  .mobile-menu-btn { display: none; }
+  .mobile-only { display: none; }
+  .admin-icon { display: none; }
+  .nav-forum-mobile { display: none; }
+
+  @media (max-width: 760px) {
+    .container { padding: 0 16px; }
+    .icon-btn { width: 44px; height: 44px; }
+    .nav-btn { padding-top: 14px; padding-bottom: 14px; }
+    .header-actions .btn-secondary,
+    .header-actions .btn-primary span.btn-label { display: none; }
+    .admin-icon { display: inline; }
+    .nav-forum-mobile { display: inline-block; color: var(--red); }
+    .featured-title { font-size: 24px; }
+    .article-full-title { font-size: 28px; }
+    .related-grid { grid-template-columns: 1fr; }
+    .discussion-hero h1 { font-size: 38px; }
+    .email-capture { padding: 24px 20px; }
+    .email-capture-form { flex-direction: column; }
+    .email-capture-title { font-size: 21px; }
+    .nav-bar { position: relative; }
+    .comment-form-row { grid-template-columns: 1fr; }
+    .bo-table-header { display: none; }
+    .bo-table-row { grid-template-columns: 1fr; gap: 6px; padding: 14px 16px; }
+    .article-full-body { font-size: 16px; }
+    .topbar-date { font-size: 9px; }
+    .mobile-only { display: flex; }
+  }
+
+  @media (max-width: 480px) {
+    .featured-image-placeholder .img-placeholder-text { font-size: 44px; }
+    .article-full-title { font-size: 24px; }
+    .featured-title { font-size: 21px; }
+  }
+
+  /* Respecte la préférence de mouvement réduit */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Barre de progression de lecture -->
+<div class="reading-progress" id="reading-progress"></div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-inner">
+      <span class="topbar-date" id="topbar-date"></span>
+      <div class="topbar-langs">
+        <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="header-main">
+      <a class="site-logo" onclick="showPage('home')" tabindex="0">
+        <div class="logo-emblem">
+          <span class="logo-emblem-text">PSG</span>
+        </div>
+        <div class="logo-text">
+          <div class="logo-name">PSG<span>Magazine</span></div>
+          <div class="logo-tagline" id="tagline">Ici c'est Paris — Le magazine des fans</div>
+        </div>
+      </a>
+      <div class="header-actions">
+        <button class="icon-btn" onclick="openSearch()" id="btn-search" title="Rechercher" aria-label="Rechercher">🔍</button>
+        <button class="icon-btn" onclick="toggleTheme()" id="btn-theme" title="Mode sombre" aria-label="Changer de thème">🌙</button>
+        <button class="btn-secondary" onclick="showPage('discussion')" id="btn-forum">Forum</button>
+        <button class="btn-primary" onclick="showPage('backoffice')" id="btn-admin"><span class="btn-label">Administration</span><span class="admin-icon">⚙️</span></button>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <div class="nav-inner">
+        <button class="nav-btn active" onclick="filterCat('all')" id="nav-all">Tout</button>
+        <button class="nav-btn" onclick="filterCat('Transferts')" id="nav-transferts">Transferts</button>
+        <button class="nav-btn" onclick="filterCat('Matchs')" id="nav-matchs">Matchs</button>
+        <button class="nav-btn" onclick="filterCat('Ligue des Champions')" id="nav-ldc">Ligue des Champions</button>
+        <button class="nav-btn" onclick="filterCat('Mercato')" id="nav-mercato">Mercato</button>
+        <button class="nav-btn" onclick="filterCat('Rumeurs')" id="nav-rumeurs">Rumeurs</button>
+        <button class="nav-btn" onclick="filterCat('Analyse')" id="nav-analyse">Analyse</button>
+        <button class="nav-btn" onclick="filterCat('Formation')" id="nav-formation">Formation</button>
+        <button class="nav-btn nav-forum-mobile" onclick="showPage('discussion')" id="nav-forum-mobile">💬 Forum</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!--  HOME PAGE                                               -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+  <div class="container" style="padding-top: 36px;">
+    <div class="home-grid" id="home-grid">
+      <!-- Featured article (JS) -->
+    </div>
+
+    <!-- Capture email (l'actif le plus important) -->
+    <div class="email-capture">
+      <div class="email-capture-inner">
+        <div class="email-capture-eyebrow" id="ec-eyebrow">La newsletter PSG Magazine</div>
+        <div class="email-capture-title" id="ec-title">Ne ratez plus aucune info vérifiée sur le PSG</div>
+        <div class="email-capture-desc" id="ec-desc">Chaque semaine : le mercato décrypté, les analyses, et le vrai du faux des rumeurs. Directement dans votre boîte mail.</div>
+        <div class="email-capture-form">
+          <input class="email-capture-input" id="newsletter-email" type="email" placeholder="votre@email.com" />
+          <button class="email-capture-btn" onclick="subscribeNewsletter()" id="ec-btn">S'inscrire</button>
+        </div>
+        <div class="email-capture-privacy" id="ec-privacy">Pas de spam. Désinscription en un clic. Vos données ne sont jamais revendues.</div>
+      </div>
+    </div>
+
+    <div class="section-header" id="latest-section-header">
+      <span class="section-header-title" id="section-label">Derniers articles</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="articles-grid" id="articles-grid">
+      <!-- Article cards (JS) -->
+    </div>
+
+    <!-- Emplacement publicitaire AdSense (colle ton code ici une fois validé) -->
+    <div class="ad-slot" id="ad-slot-home">Emplacement publicitaire</div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo-name">PSG<span>Magazine</span></div>
+          <p class="footer-desc" id="footer-desc">Le magazine indépendant des fans du Paris Saint-Germain. Analyses, transferts, décryptage.</p>
+        </div>
+        <div>
+          <div class="footer-col-title" id="footer-cat-title">Catégories</div>
+          <div class="footer-links">
+            <button class="footer-link" onclick="filterCat('Transferts')">Transferts</button>
+            <button class="footer-link" onclick="filterCat('Matchs')">Matchs</button>
+            <button class="footer-link" onclick="filterCat('Ligue des Champions')">Ligue des Champions</button>
+            <button class="footer-link" onclick="filterCat('Analyse')">Analyse</button>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title" id="footer-info-title">Informations</div>
+          <div class="footer-links">
+            <button class="footer-link" onclick="showPage('discussion')" id="footer-forum">Forum discussion</button>
+            <button class="footer-link" onclick="showLegal('mentions')" id="footer-mentions">Mentions légales</button>
+            <button class="footer-link" onclick="showLegal('privacy')" id="footer-privacy">Confidentialité (RGPD)</button>
+            <button class="footer-link" onclick="showLegal('cookies')" id="footer-cookies-link">Politique cookies</button>
+            <button class="footer-link" onclick="showLegal('cgu')" id="footer-cgu">Conditions d'utilisation</button>
+            <button class="footer-link" onclick="showLegal('contact')" id="footer-contact">Contact</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-bottom-text">© 2026 PSGMagazine.com</span>
+        <span class="footer-disclaimer" id="footer-disclaimer">Site non officiel — Non affilié au Paris Saint-Germain</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!--  ARTICLE PAGE                                            -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div class="page" id="page-article">
+  <div class="article-page">
+    <button class="article-back" onclick="showPage('home')">Retour aux articles</button>
+    <div id="article-category-badge"></div>
+    <h1 class="article-full-title" id="article-full-title"></h1>
+    <div class="article-full-meta">
+      <div class="author-avatar" id="author-avatar"></div>
+      <div>
+        <div style="font-size:13px;font-weight:600;color:var(--text)" id="article-author"></div>
+        <div style="font-size:11px;color:var(--muted)" id="article-date"></div>
+      </div>
+    </div>
+    <div id="article-image-container"></div>
+    <div id="article-reliability-meter"></div>
+    <div class="article-full-body" id="article-full-body"></div>
+    <div id="article-share-bar"></div>
+  </div>
+
+  <!-- Articles similaires -->
+  <div class="related-section" id="related-section"></div>
+
+  <!-- COMMENTS -->
+  <div class="comments-section">
+    <div class="comments-header">
+      <span class="comments-title" id="comments-title">Commentaires</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="comment-form">
+      <div class="comment-form-row">
+        <input class="form-input" id="comment-name" placeholder="Votre prénom" />
+        <input class="form-input" id="comment-city" placeholder="Ville (optionnel)" />
+      </div>
+      <textarea class="form-textarea" id="comment-text" placeholder="Partagez votre réaction..."></textarea>
+      <div class="moderation-note">
+        🛡️ <span id="moderation-note-text">Les commentaires sont modérés automatiquement. Insultes et spam supprimés.</span>
+      </div>
+      <button class="btn-primary" onclick="submitComment()" id="btn-submit-comment">Publier</button>
+    </div>
+    <div id="comments-list"></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!--  DISCUSSION PAGE                                         -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div class="page" id="page-discussion">
+  <div class="discussion-hero">
+    <div class="container">
+      <div class="discussion-hero-inner">
+        <h1>LE <span>VIRAGE</span></h1>
+        <p id="discussion-subtitle">L'espace de discussion des fans du PSG. Partagez vos analyses, vos réactions, votre passion.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="discussion-grid">
+      <div>
+        <div class="new-thread-form">
+          <div class="new-thread-title" id="new-thread-label">Ouvrir une discussion</div>
+          <input class="form-input" id="thread-author" placeholder="Votre prénom" style="margin-bottom:10px" />
+          <input class="form-input" id="thread-title-input" placeholder="Sujet de votre discussion..." style="margin-bottom:10px" />
+          <textarea class="form-textarea" id="thread-body" placeholder="Développez votre point de vue..."></textarea>
+          <div class="moderation-note" style="margin-top:10px">
+            🛡️ <span id="thread-mod-note">Modération automatique anti-insultes & anti-bots.</span>
+          </div>
+          <button class="btn-primary" style="margin-top:10px;width:100%" onclick="submitThread()" id="btn-start-discussion">Lancer la discussion</button>
+        </div>
+        <div id="threads-list"></div>
+      </div>
+      <div>
+        <div class="discussion-sidebar-card">
+          <div class="discussion-sidebar-title" id="rules-title">Règles du virage</div>
+          <ul class="rules-list" id="rules-list">
+            <li>Respectez les autres supporters</li>
+            <li>Pas d'insultes ni de langage haineux</li>
+            <li>Restez dans le sujet PSG</li>
+            <li>Pas de spam ni de liens commerciaux</li>
+            <li>Modération IA en temps réel</li>
+          </ul>
+        </div>
+        <div class="discussion-sidebar-card">
+          <div class="discussion-sidebar-title" id="stats-title">Communauté</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:13px;color:var(--muted)" id="stat-discussions">Discussions</span>
+              <span style="font-size:20px;font-weight:700;font-family:var(--font-display);color:var(--accent-text)" id="stat-threads-count">0</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:13px;color:var(--muted)" id="stat-messages">Messages</span>
+              <span style="font-size:20px;font-weight:700;font-family:var(--font-display);color:var(--red)" id="stat-comments-count">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!--  BACK-OFFICE                                             -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div class="page" id="page-backoffice">
+  <div class="backoffice-header">
+    <div class="container">
+      <div class="backoffice-header-inner">
+        <div class="backoffice-title">PSG<span>Magazine</span> — Admin</div>
+        <button class="btn-secondary" onclick="showPage('home')" style="color:#fff;border-color:rgba(255,255,255,0.3)">← Voir le site</button>
+      </div>
+    </div>
+  </div>
+  <div class="backoffice-layout">
+    <!-- Sidebar nav -->
+    <div class="backoffice-sidebar">
+      <div class="backoffice-nav-item active" onclick="showBoSection('articles')" id="bo-nav-articles">
+        <span class="backoffice-nav-icon">📰</span> Mes articles
+      </div>
+      <div class="backoffice-nav-item" onclick="newArticle()" id="bo-nav-new">
+        <span class="backoffice-nav-icon">✍️</span> Nouvel article
+      </div>
+      <div class="backoffice-nav-item" onclick="showBoSection('comments')" id="bo-nav-comments">
+        <span class="backoffice-nav-icon">💬</span> Commentaires
+      </div>
+      <div class="backoffice-nav-item" onclick="showBoSection('stats')" id="bo-nav-stats">
+        <span class="backoffice-nav-icon">📊</span> Statistiques
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="backoffice-content">
+
+      <!-- Articles list -->
+      <div id="bo-section-articles">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+          <h2 style="font-family:var(--font-serif);font-size:22px;font-weight:700">Mes articles</h2>
+          <button class="btn-primary" onclick="newArticle()">+ Nouvel article</button>
+        </div>
+        <div class="bo-articles-table">
+          <div class="bo-table-header">
+            <span>Titre</span>
+            <span>Catégorie</span>
+            <span>Date</span>
+            <span>Statut</span>
+            <span>Actions</span>
+          </div>
+          <div id="bo-articles-list"></div>
+        </div>
+      </div>
+
+      <!-- New / Edit article -->
+      <div id="bo-section-new-article" class="hidden">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+          <h2 style="font-family:var(--font-serif);font-size:22px;font-weight:700" id="editor-page-title">Nouvel article</h2>
+          <button class="btn-secondary" onclick="cancelEdit()">Annuler</button>
+        </div>
+        <div class="editor-layout">
+          <!-- Editor -->
+          <div>
+            <div class="editor-main">
+              <div class="editor-toolbar">
+                <button class="toolbar-btn" onclick="formatText('bold')"><b>G</b></button>
+                <button class="toolbar-btn" onclick="formatText('italic')"><i>I</i></button>
+                <button class="toolbar-btn" onclick="insertQuote()">« »</button>
+                <button class="toolbar-btn" onclick="insertSeparator()">— Séparateur</button>
+                <div style="flex:1"></div>
+                <span style="font-size:11px;color:var(--muted)" id="word-count">0 mots</span>
+              </div>
+              <textarea
+                id="editor-title"
+                class="editor-title-input"
+                placeholder="Titre de l'article..."
+                rows="2"
+                oninput="updateWordCount()"
+              ></textarea>
+              <textarea
+                id="editor-body"
+                class="editor-body-input"
+                placeholder="Commencez à écrire votre article... Collez une info d'insider, développez votre analyse, partagez votre vision du PSG."
+                oninput="updateWordCount()"
+              ></textarea>
+            </div>
+
+            <!-- Version anglaise (optionnelle — auto-traduite à la publication) -->
+            <div style="margin-top:12px">
+              <button class="btn-secondary" style="width:100%;text-align:left;display:flex;align-items:center;justify-content:space-between" onclick="toggleEnReview()" id="en-review-toggle">
+                <span>🌍 Version anglaise — relire / ajuster (optionnel)</span>
+                <span id="en-review-chevron">▾</span>
+              </button>
+              <div id="en-review-panel" class="hidden" style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:16px;margin-top:8px">
+                <p style="font-size:12px;color:var(--muted);margin-bottom:14px;line-height:1.5">
+                  💡 Laisse vide : l'article sera traduit automatiquement à la publication. Ou remplis ici pour contrôler la version anglaise toi-même.
+                </p>
+                <div class="meta-label">Titre (EN)</div>
+                <input class="meta-input-small" id="editor-title-en" placeholder="English title..." style="margin-bottom:10px" />
+                <div class="meta-label">Extrait (EN)</div>
+                <textarea class="meta-input-small" id="editor-excerpt-en" rows="2" placeholder="English excerpt..." style="margin-bottom:10px"></textarea>
+                <div class="meta-label">Contenu (EN)</div>
+                <textarea class="meta-input-small" id="editor-body-en" rows="6" placeholder="English content..." style="font-family:var(--font-serif)"></textarea>
+                <button class="btn-secondary" style="margin-top:10px;width:100%" onclick="autoTranslateNow()" id="btn-auto-translate">⚡ Pré-traduire maintenant avec l'IA</button>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:10px;margin-top:12px">
+              <button class="btn-secondary" style="flex:1" onclick="saveArticle('draft')">Enregistrer brouillon</button>
+              <button class="btn-primary" style="flex:2" onclick="saveArticle('published')" id="btn-publish">Publier l'article</button>
+            </div>
+          </div>
+
+          <!-- AI Panel -->
+          <div>
+            <div class="ai-panel">
+              <div class="ai-panel-header">
+                <div class="ai-panel-icon">✨</div>
+                <div>
+                  <div class="ai-panel-title">DeepWrite IA</div>
+                  <div class="ai-panel-sub">Propulsé par Claude</div>
+                </div>
+              </div>
+              <div class="ai-modes">
+                <button class="ai-mode-btn active" onclick="selectAiMode(this,'reformulate')">
+                  <span class="ai-mode-emoji">🔄</span>
+                  <span class="ai-mode-label">Reformuler</span>
+                  <span class="ai-mode-desc">Améliore ton texte</span>
+                </button>
+                <button class="ai-mode-btn" onclick="selectAiMode(this,'titles')">
+                  <span class="ai-mode-emoji">💡</span>
+                  <span class="ai-mode-label">Titres</span>
+                  <span class="ai-mode-desc">5 idées de titres</span>
+                </button>
+                <button class="ai-mode-btn" onclick="selectAiMode(this,'analyse')">
+                  <span class="ai-mode-emoji">🔍</span>
+                  <span class="ai-mode-label">Analyser</span>
+                  <span class="ai-mode-desc">Angles & questions</span>
+                </button>
+                <button class="ai-mode-btn" onclick="selectAiMode(this,'translate')">
+                  <span class="ai-mode-emoji">🌍</span>
+                  <span class="ai-mode-label">Traduire EN</span>
+                  <span class="ai-mode-desc">Version anglaise</span>
+                </button>
+                <button class="ai-mode-btn" onclick="selectAiMode(this,'intro')">
+                  <span class="ai-mode-emoji">✍️</span>
+                  <span class="ai-mode-label">Intro</span>
+                  <span class="ai-mode-desc">Rédige l'accroche</span>
+                </button>
+                <button class="ai-mode-btn" onclick="selectAiMode(this,'factcheck')">
+                  <span class="ai-mode-emoji">✅</span>
+                  <span class="ai-mode-label">Fact-check</span>
+                  <span class="ai-mode-desc">Structure vérif.</span>
+                </button>
+              </div>
+              <div class="ai-prompt-area">
+                <textarea
+                  id="ai-prompt"
+                  class="ai-prompt-input"
+                  placeholder="Colle ton texte ou ton idée ici..."
+                ></textarea>
+                <button class="ai-run-btn" onclick="runAI()" id="ai-run-btn">
+                  ✨ Lancer DeepWrite
+                </button>
+                <div class="ai-result" id="ai-result">
+                  <div id="ai-result-text"></div>
+                  <button class="ai-apply-btn" onclick="applyAI()">↙ Appliquer dans l'éditeur</button>
+                </div>
+              </div>
+              <div style="height:8px"></div>
+            </div>
+
+            <!-- Metadata -->
+            <div class="ai-panel" style="margin-top:16px">
+              <div class="editor-meta">
+                <div class="editor-meta-title">Paramètres</div>
+                <div class="meta-field">
+                  <div class="meta-label">Image de l'article</div>
+                  <div id="image-upload-zone" class="image-upload-zone" onclick="document.getElementById('editor-image-input').click()">
+                    <div id="image-upload-empty" class="image-upload-empty">
+                      <span style="font-size:24px">🖼️</span>
+                      <span>Cliquer pour importer une image</span>
+                      <span style="font-size:10px;opacity:0.7">JPG, PNG · optimisée automatiquement</span>
+                    </div>
+                    <img id="image-preview" class="image-preview" style="display:none" alt="Aperçu" />
+                  </div>
+                  <input type="file" id="editor-image-input" accept="image/*" style="display:none" onchange="handleImageUpload(event)" />
+                  <button id="image-remove-btn" class="btn-secondary" style="display:none;width:100%;margin-top:8px;font-size:12px;padding:6px" onclick="removeImage()">🗑️ Retirer l'image</button>
+                </div>
+                <div class="meta-field">
+                  <div class="meta-label">Catégorie</div>
+                  <select class="meta-select" id="editor-category">
+                    <option>Transferts</option>
+                    <option>Matchs</option>
+                    <option>Ligue des Champions</option>
+                    <option>Mercato</option>
+                    <option>Rumeurs</option>
+                    <option>Analyse</option>
+                    <option>Formation</option>
+                  </select>
+                </div>
+                <div class="meta-field">
+                  <div class="meta-label">Extrait (résumé court)</div>
+                  <textarea class="meta-input-small" id="editor-excerpt" rows="3" placeholder="2-3 phrases d'accroche..."></textarea>
+                </div>
+                <div class="meta-field">
+                  <div class="meta-label">Indice de fiabilité</div>
+                  <select class="meta-select" id="editor-reliability">
+                    <option value="confirmed">🟢 Confirmé</option>
+                    <option value="watch">🟡 À surveiller</option>
+                    <option value="intox">🔴 Intox / démenti</option>
+                  </select>
+                </div>
+                <div class="meta-field">
+                  <div class="meta-label">Source de l'info</div>
+                  <input class="meta-input-small" id="editor-source" placeholder="Ex : Fabrizio Romano, conf. presse..." />
+                </div>
+                <div class="meta-field">
+                  <div class="meta-label">Article mis en avant ?</div>
+                  <select class="meta-select" id="editor-featured">
+                    <option value="0">Non</option>
+                    <option value="1">Oui — À la une</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comments moderation -->
+      <div id="bo-section-comments" class="hidden">
+        <h2 style="font-family:var(--font-serif);font-size:22px;font-weight:700;margin-bottom:24px">Modération des commentaires</h2>
+        <div id="bo-comments-list"></div>
+      </div>
+
+      <!-- Stats -->
+      <div id="bo-section-stats" class="hidden">
+        <h2 style="font-family:var(--font-serif);font-size:22px;font-weight:700;margin-bottom:24px">Statistiques</h2>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:32px">
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:20px">
+            <div style="font-size:11px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">Articles publiés</div>
+            <div style="font-family:var(--font-display);font-size:44px;color:var(--accent-text)" id="stat-published">0</div>
+          </div>
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:20px">
+            <div style="font-size:11px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">Brouillons</div>
+            <div style="font-family:var(--font-display);font-size:44px;color:var(--gold)" id="stat-drafts">0</div>
+          </div>
+          <div style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:20px">
+            <div style="font-size:11px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">Commentaires</div>
+            <div style="font-family:var(--font-display);font-size:44px;color:var(--red)" id="stat-total-comments">0</div>
+          </div>
+          <div style="background:var(--navy);border:1px solid var(--navy);border-radius:4px;padding:20px">
+            <div style="font-size:11px;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px">Abonnés newsletter</div>
+            <div style="font-family:var(--font-display);font-size:44px;color:#fff" id="stat-subscribers">0</div>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:20px">
+          <div style="font-size:11px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:14px">Liste des abonnés</div>
+          <div id="subscribers-list" style="font-size:13px;color:var(--text);line-height:1.8"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════ -->
+<!--  PAGE LÉGALE                                             -->
+<!-- ════════════════════════════════════════════════════════ -->
+<div class="page" id="page-legal">
+  <div class="container" style="padding:40px 24px 80px;max-width:900px">
+    <button class="article-back" onclick="showPage('home')" id="legal-back">Retour à l'accueil</button>
+    <div class="legal-tabs" id="legal-tabs">
+      <button class="legal-tab" onclick="showLegal('mentions')" data-legal="mentions">Mentions légales</button>
+      <button class="legal-tab" onclick="showLegal('privacy')" data-legal="privacy">Confidentialité</button>
+      <button class="legal-tab" onclick="showLegal('cookies')" data-legal="cookies">Cookies</button>
+      <button class="legal-tab" onclick="showLegal('cgu')" data-legal="cgu">Conditions</button>
+      <button class="legal-tab" onclick="showLegal('contact')" data-legal="contact">Contact</button>
+    </div>
+    <div class="legal-content" id="legal-content"></div>
+  </div>
+</div>
+
+<div class="search-overlay" id="search-overlay" onclick="if(event.target===this)closeSearch()">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <span style="font-size:18px">🔍</span>
+      <input class="search-input" id="search-input" type="text" placeholder="Rechercher un article..." oninput="runSearch(this.value)" />
+      <button class="icon-btn" onclick="closeSearch()" style="width:32px;height:32px;font-size:14px">✕</button>
+    </div>
+    <div class="search-results" id="search-results"></div>
+    <div class="search-hint">Astuce : tape un mot-clé (joueur, mercato, match...) · Échap pour fermer</div>
+  </div>
+</div>
+
+<!-- Bouton retour en haut -->
+<button class="back-to-top" id="back-to-top" onclick="scrollTop()" aria-label="Retour en haut">↑</button>
+
+<!-- Bandeau cookies -->
+<div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-text" id="cookie-text">
+    🍪 Ce site utilise des cookies pour mesurer l'audience et afficher des publicités (Google AdSense). Vous pouvez accepter ou refuser. <a onclick="showLegal('cookies')">En savoir plus</a>
+  </div>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-btn-refuse" onclick="setCookieConsent('refused')" id="cookie-refuse">Refuser</button>
+    <button class="cookie-btn cookie-btn-accept" onclick="setCookieConsent('accepted')" id="cookie-accept">Accepter</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ════════════════════════════════════════════════════════════
+//  DATA
+// ════════════════════════════════════════════════════════════
+let currentLang = 'fr';
+let currentAiMode = 'reformulate';
+let editingArticleId = null;
+
+const TRANSLATIONS = {
+  fr: {
+    tagline: "Ici c'est Paris — Le magazine des fans",
+    forum: "Forum",
+    admin: "Administration",
+    sectionLabel: "Derniers articles",
+    footerDesc: "Le magazine indépendant des fans du Paris Saint-Germain. Analyses, transferts, décryptage.",
+    footerCatTitle: "Catégories",
+    footerInfoTitle: "Informations",
+    footerForum: "Forum discussion",
+    footerMentions: "Mentions légales",
+    footerPrivacy: "Confidentialité (RGPD)",
+    footerCookies: "Politique cookies",
+    footerCgu: "Conditions d'utilisation",
+    footerContact: "Contact",
+    cookieAccept: "Accepter",
+    cookieRefuse: "Refuser",
+    cookieText: "🍪 Ce site utilise des cookies pour mesurer l'audience et afficher des publicités (Google AdSense). Vous pouvez accepter ou refuser.",
+    footerDisclaimer: "Site non officiel — Non affilié au Paris Saint-Germain",
+    discussionSubtitle: "L'espace de discussion des fans du PSG. Partagez vos analyses, vos réactions, votre passion.",
+    newThreadLabel: "Ouvrir une discussion",
+    threadModNote: "Modération automatique anti-insultes & anti-bots.",
+    btnStartDiscussion: "Lancer la discussion",
+    rulesTitle: "Règles du virage",
+    rules: ["Respectez les autres supporters","Pas d'insultes ni de langage haineux","Restez dans le sujet PSG","Pas de spam ni de liens commerciaux","Modération IA en temps réel"],
+    statsTitle: "Communauté",
+    statDiscussions: "Discussions",
+    statMessages: "Messages",
+    commentsTitle: "Commentaires",
+    moderationNote: "Les commentaires sont modérés automatiquement. Insultes et spam supprimés.",
+    btnSubmitComment: "Publier",
+    ecEyebrow: "La newsletter PSG Magazine",
+    ecTitle: "Ne ratez plus aucune info vérifiée sur le PSG",
+    ecDesc: "Chaque semaine : le mercato décrypté, les analyses, et le vrai du faux des rumeurs. Directement dans votre boîte mail.",
+    ecBtn: "S'inscrire",
+    ecPrivacy: "Pas de spam. Désinscription en un clic. Vos données ne sont jamais revendues.",
+    adSlot: "Emplacement publicitaire",
+  },
+  en: {
+    tagline: "Ici c'est Paris — The PSG fan magazine",
+    forum: "Forum",
+    admin: "Admin",
+    sectionLabel: "Latest articles",
+    footerDesc: "The independent Paris Saint-Germain fan magazine. Analysis, transfers, insight.",
+    footerCatTitle: "Categories",
+    footerInfoTitle: "Information",
+    footerForum: "Discussion forum",
+    footerMentions: "Legal notice",
+    footerPrivacy: "Privacy (GDPR)",
+    footerCookies: "Cookie policy",
+    footerCgu: "Terms of use",
+    footerContact: "Contact",
+    cookieAccept: "Accept",
+    cookieRefuse: "Refuse",
+    cookieText: "🍪 This site uses cookies to measure audience and display ads (Google AdSense). You can accept or refuse.",
+    footerDisclaimer: "Unofficial fan site — Not affiliated with Paris Saint-Germain",
+    discussionSubtitle: "The PSG fan discussion space. Share your analysis, reactions, and passion.",
+    newThreadLabel: "Start a discussion",
+    threadModNote: "Automatic moderation against insults & bots.",
+    btnStartDiscussion: "Start discussion",
+    rulesTitle: "Community rules",
+    rules: ["Respect other supporters","No insults or hate speech","Stay on PSG topics","No spam or commercial links","Real-time AI moderation"],
+    statsTitle: "Community",
+    statDiscussions: "Discussions",
+    statMessages: "Messages",
+    commentsTitle: "Comments",
+    moderationNote: "Comments are automatically moderated. Insults and spam removed.",
+    btnSubmitComment: "Post",
+    ecEyebrow: "The PSG Magazine newsletter",
+    ecTitle: "Never miss verified PSG news again",
+    ecDesc: "Every week: the transfer market decoded, analysis, and fact-checked rumours. Straight to your inbox.",
+    ecBtn: "Subscribe",
+    ecPrivacy: "No spam. Unsubscribe in one click. Your data is never sold.",
+    adSlot: "Advertising space",
+  }
+};
+
+const BANNED_WORDS = ['merde','putain','connard','idiot','nul','fdp','va te faire','salopard','enculé','pd','TN','nazi','hate','stupid','loser','idiot'];
+
+const SAMPLE_ARTICLES = [
+  {
+    id: 1,
+    title: "Kolo Muani retrouve son meilleur niveau : le PSG enfin rassuré",
+    titleEn: "Kolo Muani back to his best: PSG finally reassured",
+    category: "Matchs",
+    excerpt: "Après une période de doutes, l'attaquant français enchaîne les performances solides et redonne le sourire à Luis Enrique.",
+    excerptEn: "After a period of doubt, the French striker strings together solid performances and brings smiles back to Luis Enrique.",
+    content: `Randal Kolo Muani semble avoir définitivement tourné la page d'un début de saison difficile. Ses deux dernières prestations ont été saluées par le staff technique, qui voit en lui un joueur transformé.
+
+Plus serein dans ses prises de décision, plus efficace dans les zones de vérité — le numéro 9 parisien retrouve les sensations qui avaient justifié son recrutement à prix d'or. Face à Lille, son mouvement dans la profondeur et son jeu de corps ont démontré une maturité nouvelle.
+
+Luis Enrique, lui, n'a pas caché sa satisfaction en conférence de presse : "Randal travaille énormément. Ce que vous voyez sur le terrain, c'est le fruit de semaines de travail intensif." Un message fort de la part d'un entraîneur qui ne distribue jamais les compliments à la légère.
+
+Pour les supporters parisiens, c'est une excellente nouvelle à l'approche des grandes échéances européennes. Un Kolo Muani en feu pourrait bien être la clé de voûte de l'offensive parisienne dans les semaines à venir.`,
+    date: "16 mai 2026",
+    author: "Ayoub",
+    status: "published",
+    featured: true,
+    reliability: "confirmed",
+    source: "Conférence de presse officielle + observations match",
+    contentEn: `Randal Kolo Muani seems to have definitively turned the page on a difficult start to the season. His last two performances were praised by the technical staff, who see in him a transformed player.
+
+More composed in his decision-making, more clinical in the danger zones — the Parisian number 9 is rediscovering the form that justified his big-money signing. Against Lille, his movement in behind and his body play showed a new maturity.
+
+Luis Enrique, for his part, did not hide his satisfaction in the press conference: "Randal works enormously hard. What you see on the pitch is the result of weeks of intensive work." A strong message from a coach who never hands out compliments lightly.
+
+For Parisian supporters, this is excellent news ahead of the big European fixtures. A red-hot Kolo Muani could well be the cornerstone of the Parisian attack in the weeks to come.`
+  },
+  {
+    id: 2,
+    title: "Mercato estival : trois noms chauds sur le bureau de Luis Campos",
+    titleEn: "Summer transfer window: three hot names on Luis Campos' desk",
+    category: "Mercato",
+    excerpt: "Le conseiller sportif parisien aurait ciblé deux milieux et un défenseur central pour renforcer l'effectif.",
+    excerptEn: "The Parisian sporting director has reportedly targeted two midfielders and a centre-back to strengthen the squad.",
+    content: `Selon nos informations recoupées auprès de plusieurs sources proches du club, Luis Campos aurait transmis une liste de priorités à la direction parisienne pour le mercato estival.
+
+Deux milieux de terrain figurent en tête des dossiers. Le premier profil correspond à un joueur capable d'équilibrer le jeu — un vrai métronome dans l'entrejeu que le système de Luis Enrique réclame depuis plusieurs mois. Le second est plus offensif, un box-to-box capable d'apporter du volume et des buts.
+
+En défense centrale, la piste mène vers un joueur d'expérience internationale, capable de prendre les commandes d'une arrière-garde qui a parfois manqué de leadership cette saison.
+
+Budget estimé entre 150 et 200 millions d'euros. Les premières discussions auraient déjà eu lieu pour au moins un de ces dossiers. Le PSG veut frapper fort et vite pour ne pas rater les meilleures opportunités du marché.`,
+    date: "15 mai 2026",
+    author: "Ayoub",
+    status: "published",
+    featured: false,
+    reliability: "watch",
+    source: "Sources proches du club (à confirmer)",
+    contentEn: `According to our information cross-checked with several sources close to the club, Luis Campos has reportedly submitted a list of priorities to the Parisian management for the summer transfer window.
+
+Two midfielders top the list. The first profile is a player capable of balancing the game — a true metronome in midfield that Luis Enrique's system has been calling for over several months. The second is more attack-minded, a box-to-box capable of bringing volume and goals.
+
+In central defence, the trail leads to a player with international experience, capable of taking command of a backline that has sometimes lacked leadership this season.
+
+Estimated budget between 150 and 200 million euros. Initial discussions have reportedly already taken place for at least one of these targets. PSG want to strike hard and fast so as not to miss the best opportunities on the market.`
+  },
+  {
+    id: 3,
+    title: "Analyse : Pourquoi le pressing de Luis Enrique est révolutionnaire",
+    titleEn: "Analysis: Why Luis Enrique's pressing is revolutionary",
+    category: "Analyse",
+    excerpt: "Décryptage tactique du système mis en place par le technicien espagnol qui transforme le PSG en une machine de guerre collective.",
+    excerptEn: "Tactical breakdown of the Spanish coach's system that is transforming PSG into a collective war machine.",
+    content: `Il y a quelque chose de fondamentalement différent dans le PSG version Luis Enrique. Pas seulement sur le plan des résultats, mais dans l'identité même du jeu. Une identité qui se construit autour d'un principe directeur : récupérer le ballon le plus haut possible sur le terrain.
+
+Le pressing haut à la Enrique n'est pas nouveau dans le football européen. Mais son application au PSG révèle une sophistication tactique rare. Chaque joueur connaît précisément sa zone de déclenchement, son partenaire de pressing, et son repli en cas d'échec. C'est un système d'une complexité redoutable, maîtrisé au fil de mois de travail intensif.
+
+La clé ? La synchronisation. Lorsque le pressing se déclenche, c'est six ou sept joueurs qui bougent simultanément, créant des couloirs de sortie piégés pour l'adversaire.
+
+Ce que j'observe après analyse des derniers matchs : le PSG perd moins de ballons dans des zones dangereuses, récupère plus haut, et crée davantage de situations de transition rapide. Les chiffres parlent d'eux-mêmes. C'est une révolution silencieuse mais réelle.`,
+    date: "14 mai 2026",
+    author: "Ayoub",
+    status: "published",
+    featured: false,
+    reliability: "confirmed",
+    source: "Analyse personnelle des matchs",
+    contentEn: `There is something fundamentally different about Luis Enrique's PSG. Not only in terms of results, but in the very identity of the play. An identity built around one guiding principle: winning the ball back as high up the pitch as possible.
+
+High pressing à la Enrique is nothing new in European football. But its application at PSG reveals a rare tactical sophistication. Each player knows precisely their trigger zone, their pressing partner, and their recovery run if it fails. It is a system of formidable complexity, mastered over months of intensive work.
+
+The key? Synchronisation. When the press is triggered, it is six or seven players moving simultaneously, creating trapped passing lanes for the opponent.
+
+What I observe after analysing the recent matches: PSG lose fewer balls in dangerous areas, win them back higher, and create more fast transition situations. The numbers speak for themselves. It is a silent but very real revolution.`
+  },
+  {
+    id: 4,
+    title: "Ligue des Champions : Le groupe de Paris pour la phase finale",
+    titleEn: "Champions League: Paris group for the final phase",
+    category: "Ligue des Champions",
+    excerpt: "Le tirage au sort de la phase finale de la Ligue des Champions a été favorable aux Parisiens.",
+    excerptEn: "The Champions League final phase draw has been favourable for the Parisians.",
+    content: `Le tirage au sort de la phase finale de la Ligue des Champions a livré ses verdicts. Le Paris Saint-Germain connaît désormais ses adversaires pour la suite de la compétition.
+
+Un adversaire gérable en quarts, un choc potentiel en demies contre l'un des mastodontes européens — le scénario idéal pour que le PSG construise sa montée en puissance tout en se réservant pour les rendez-vous décisifs.
+
+La route vers la finale n'a jamais semblé aussi dégagée pour le club de la capitale. Mais l'histoire du PSG en Ligue des Champions nous a appris à ne jamais crier victoire trop tôt.
+
+Ce qui est certain, c'est que ce groupe, avec cette organisation défensive et cette cohérence collective, aborde la compétition différemment. Plus mature. Plus serein. L'envie de lever enfin ce trophée est palpable dans chaque prise de parole des joueurs et du staff.`,
+    date: "12 mai 2026",
+    author: "Ayoub",
+    status: "published",
+    featured: false,
+    reliability: "confirmed",
+    source: "Tirage au sort officiel UEFA",
+    contentEn: `The Champions League final phase draw has delivered its verdicts. Paris Saint-Germain now know their opponents for the remainder of the competition.
+
+A manageable opponent in the quarters, a potential clash in the semis against one of the European giants — the ideal scenario for PSG to build momentum while keeping something in reserve for the decisive encounters.
+
+The road to the final has never seemed so clear for the capital club. But PSG's Champions League history has taught us never to declare victory too early.
+
+What is certain is that this group, with this defensive organisation and this collective coherence, approaches the competition differently. More mature. More composed. The desire to finally lift this trophy is palpable in every statement from the players and staff.`
+  },
+  {
+    id: 5,
+    title: "Rumeur : Un crack sud-américain dans le viseur parisien",
+    titleEn: "Rumour: A South American star in Parisian crosshairs",
+    category: "Rumeurs",
+    excerpt: "Plusieurs sources concordantes évoquent un intérêt sérieux du PSG pour un jeune attaquant qui affole les compteurs en Amérique du Sud.",
+    excerptEn: "Several converging sources mention PSG's serious interest in a young striker making waves in South America.",
+    content: `C'est l'une des pistes les plus excitantes du mercato estival à venir. Plusieurs journalistes suivis pour leur fiabilité évoquent depuis quelques jours un intérêt concret du PSG pour un jeune attaquant évoluant en Amérique du Sud.
+
+Le profil coché : moins de 22 ans, explosif, technique, capable d'évoluer sur les deux ailes. Un joueur qui correspond parfaitement aux critères de Luis Enrique en termes d'intensité et de polyvalence offensive.
+
+Avant de s'emballer, rappelons que nous sommes au stade des rumeurs. Dans ce type de dossier, il faut recouper plusieurs sources, surveiller les déplacements des scouts, et attendre les signaux concrets — premier contact officiel, proposition chiffrée, intérêt du joueur lui-même.
+
+Ce que je peux confirmer : le nom circule en interne depuis plusieurs semaines. La suite au prochain épisode du mercato.`,
+    date: "10 mai 2026",
+    author: "Ayoub",
+    status: "published",
+    featured: false,
+    reliability: "watch",
+    source: "Plusieurs journalistes fiables (non officiel)",
+    contentEn: `It is one of the most exciting leads of the upcoming summer transfer window. For a few days now, several journalists known for their reliability have been mentioning concrete PSG interest in a young striker playing in South America.
+
+The targeted profile: under 22, explosive, technical, capable of playing on both wings. A player who fits Luis Enrique's criteria perfectly in terms of intensity and attacking versatility.
+
+Before getting carried away, let's remember we are at the rumour stage. In this type of case, you have to cross-check several sources, monitor scouts' movements, and wait for concrete signals — first official contact, a figured offer, the player's own interest.
+
+What I can confirm: the name has been circulating internally for several weeks. More to come in the next episode of the transfer window.`
+  },
+  {
+    id: 6,
+    title: "Formation : Les pépites qui frappent à la porte du groupe pro",
+    titleEn: "Academy: The gems knocking on the first team door",
+    category: "Formation",
+    excerpt: "Le centre de formation parisien produit une génération exceptionnelle. Coup de projecteur sur les profils à suivre.",
+    excerptEn: "The Parisian academy is producing an exceptional generation. Spotlight on the profiles to watch.",
+    content: `Le vivier parisien n'a jamais semblé aussi riche. Cette saison, plusieurs éléments du centre de formation du PSG s'imposent comme des candidats sérieux à une intégration dans le groupe professionnel.
+
+Ce qui frappe dans cette génération, c'est la maturité. Des garçons formés dans une culture du haut niveau depuis leur plus jeune âge, habitués aux exigences du club, capables de gérer la pression qui va avec le maillot parisien.
+
+Luis Enrique a toujours montré une appétence pour les jeunes joueurs courageux. Plusieurs éléments de la génération 2008 ont déjà eu l'occasion de s'entraîner avec le groupe pro. Certains ont impressionné le staff.
+
+Le PSG de demain se construit peut-être autant dans les couloirs du Camp des Loges qu'au bureau des transferts. Une philosophie qui me semble enfin ancrée dans la durée.`,
+    date: "8 mai 2026",
+    author: "Ayoub",
+    status: "published",
+    featured: false,
+    reliability: "confirmed",
+    source: "Observations Camp des Loges",
+    contentEn: `The Parisian talent pool has never looked so rich. This season, several academy players are establishing themselves as serious candidates for integration into the first team.
+
+What strikes you about this generation is the maturity. Boys raised in a high-level culture from a very young age, accustomed to the club's demands, capable of handling the pressure that comes with the Parisian shirt.
+
+Luis Enrique has always shown an appetite for brave young players. Several members of the 2008 generation have already had the chance to train with the first team. Some have impressed the staff.
+
+Tomorrow's PSG is perhaps being built as much in the corridors of the Camp des Loges as at the transfer desk. A philosophy that finally seems anchored for the long term to me.`
+  }
+];
+
+// Safe storage : utilise localStorage si dispo, sinon bascule en mémoire
+// (l'aperçu intégré bloque parfois localStorage ; sur ton Mac il fonctionnera normalement)
+const Store = (function() {
+  let memory = {};
+  let useLocal = false;
+  try {
+    const k = '__psgmag_test__';
+    window.localStorage.setItem(k, '1');
+    window.localStorage.removeItem(k);
+    useLocal = true;
+  } catch (e) {
+    useLocal = false;
+  }
+  return {
+    get(key) {
+      try { return useLocal ? window.localStorage.getItem(key) : (memory[key] ?? null); }
+      catch (e) { return memory[key] ?? null; }
+    },
+    set(key, val) {
+      try { if (useLocal) window.localStorage.setItem(key, val); else memory[key] = val; }
+      catch (e) { memory[key] = val; }
+    }
+  };
+})();
+
+// Chargement sécurisé : si une donnée stockée est corrompue, on retombe sur une valeur par défaut
+// au lieu de planter tout le site (écran blanc).
+function loadStore(key, fallback) {
+  try {
+    const raw = Store.get(key);
+    if (raw === null || raw === undefined) return fallback;
+    const parsed = JSON.parse(raw);
+    return parsed;
+  } catch (e) {
+    console.warn('Donnée corrompue ignorée:', key);
+    return fallback;
+  }
+}
+
+let articles = loadStore('psgmag_articles', SAMPLE_ARTICLES);
+let comments = loadStore('psgmag_comments', []);
+let threads = loadStore('psgmag_threads', []);
+let subscribers = loadStore('psgmag_subscribers', []);
+let bookmarks = loadStore('psgmag_bookmarks', []);
+let views = loadStore('psgmag_views', {});
+
+// Garde-fous : on s'assure que les types sont corrects même si le stockage a été altéré
+if (!Array.isArray(articles) || articles.length === 0) articles = SAMPLE_ARTICLES;
+if (!Array.isArray(comments)) comments = [];
+if (!Array.isArray(threads)) threads = [];
+if (!Array.isArray(subscribers)) subscribers = [];
+if (!Array.isArray(bookmarks)) bookmarks = [];
+if (typeof views !== 'object' || views === null) views = {};
+
+function saveData() {
+  Store.set('psgmag_articles', JSON.stringify(articles));
+  Store.set('psgmag_comments', JSON.stringify(comments));
+  Store.set('psgmag_threads', JSON.stringify(threads));
+  Store.set('psgmag_subscribers', JSON.stringify(subscribers));
+  Store.set('psgmag_bookmarks', JSON.stringify(bookmarks));
+  Store.set('psgmag_views', JSON.stringify(views));
+}
+
+// Inscription newsletter — construit ta liste d'emails dès le jour 1
+function subscribeNewsletter() {
+  const input = document.getElementById('newsletter-email');
+  const email = input.value.trim();
+  const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  if (!valid) { toast(currentLang === 'en' ? '⚠️ Invalid email' : '⚠️ Email invalide'); return; }
+  if (subscribers.includes(email)) { toast(currentLang === 'en' ? 'Already subscribed!' : 'Déjà inscrit !'); return; }
+  subscribers.push(email);
+  saveData();
+  input.value = '';
+  toast(currentLang === 'en' ? '✅ Subscribed! Welcome.' : '✅ Inscrit ! Bienvenue dans la communauté.');
+}
+
+// ════════════════════════════════════════════════════════════
+//  UTILS
+// ════════════════════════════════════════════════════════════
+function getCatClass(cat) {
+  const map = {
+    'Transferts':'cat-transferts','Matchs':'cat-matchs',
+    'Ligue des Champions':'cat-ldc','Mercato':'cat-mercato',
+    'Rumeurs':'cat-rumeurs','Formation':'cat-formation','Analyse':'cat-analyse'
+  };
+  return map[cat] || 'cat-analyse';
+}
+
+// Système de fiabilité — le différenciateur du site
+function getReliabilityBadge(rel) {
+  if (!rel) return '';
+  const data = {
+    confirmed: { cls: 'rel-confirmed', label: currentLang === 'en' ? 'Confirmed' : 'Confirmé' },
+    watch:     { cls: 'rel-watch',     label: currentLang === 'en' ? 'To watch' : 'À surveiller' },
+    intox:     { cls: 'rel-intox',     label: currentLang === 'en' ? 'Debunked' : 'Intox' }
+  };
+  const d = data[rel];
+  if (!d) return '';
+  return `<span class="reliability-badge ${d.cls}"><span class="dot"></span>${d.label}</span>`;
+}
+
+function getReliabilityMeter(rel, source) {
+  if (!rel) return '';
+  const data = {
+    confirmed: { icon: '🟢', cls: 'rel-confirmed', verdict: currentLang === 'en' ? 'Confirmed information' : 'Information confirmée' },
+    watch:     { icon: '🟡', cls: 'rel-watch',     verdict: currentLang === 'en' ? 'To be confirmed' : 'À surveiller — non confirmé' },
+    intox:     { icon: '🔴', cls: 'rel-intox',     verdict: currentLang === 'en' ? 'Debunked / false' : 'Intox / démenti' }
+  };
+  const d = data[rel];
+  if (!d) return '';
+  const srcLabel = currentLang === 'en' ? 'Source' : 'Source';
+  return `<div class="reliability-meter" style="border-left-color:${rel==='confirmed'?'#22C55E':rel==='watch'?'#EAB308':'#EF4444'}">
+    <div class="reliability-meter-icon">${d.icon}</div>
+    <div class="reliability-meter-body">
+      <div class="reliability-meter-label">${currentLang === 'en' ? 'Reliability index' : 'Indice de fiabilité'}</div>
+      <div class="reliability-meter-verdict">${d.verdict}</div>
+      ${source ? `<div class="reliability-meter-source">${srcLabel} : ${escapeHtml(source)}</div>` : ''}
+    </div>
+  </div>`;
+}
+
+function isBanned(text) {
+  const t = text.toLowerCase();
+  return BANNED_WORDS.some(w => t.includes(w));
+}
+
+// Sécurité : échappe le HTML pour éviter casse d'affichage et injection (XSS)
+// sur tout contenu saisi par un visiteur ou l'admin.
+function escapeHtml(str) {
+  if (str === null || str === undefined) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Rendu du corps d'article : on échappe TOUT d'abord (sécurité), puis on convertit
+// le markdown simple inséré via la barre d'outils (**gras**, _italique_, --- séparateur).
+function renderArticleBody(text) {
+  return text.split('\n\n').map(block => {
+    const b = block.trim();
+    if (b === '---') return '<hr style="border:none;border-top:1px solid var(--border);margin:32px 0">';
+    let safe = escapeHtml(b);
+    safe = safe.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');   // gras
+    safe = safe.replace(/(^|[^_])_([^_]+)_/g, '$1<em>$2</em>');        // italique
+    safe = safe.replace(/\n/g, '<br>');                               // sauts de ligne simples
+    return `<p>${safe}</p>`;
+  }).join('');
+}
+
+function isBot(name, text) {
+  if (!name || name.length < 2) return true;
+  if (text.length < 5) return true;
+  if (/https?:\/\//.test(text)) return true;
+  if (/(.)\1{4,}/.test(text)) return true;
+  return false;
+}
+
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 3000);
+}
+
+// ════════════════════════════════════════════════════════════
+//  UX : THÈME SOMBRE
+// ════════════════════════════════════════════════════════════
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  document.body.setAttribute('data-theme', theme);
+  document.documentElement.style.background = theme === 'dark' ? '#0E1117' : '#F8F7F4';
+  const btn = document.getElementById('btn-theme');
+  if (btn) btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+  Store.set('psgmag_theme', theme);
+}
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+}
+
+// ════════════════════════════════════════════════════════════
+//  UX : TEMPS DE LECTURE
+// ════════════════════════════════════════════════════════════
+function computeReadTime(text) {
+  const words = (text || '').trim().split(/\s+/).filter(Boolean).length;
+  const mins = Math.max(1, Math.round(words / 200));
+  return mins;
+}
+function readTimeLabel(text) {
+  const m = computeReadTime(text);
+  return currentLang === 'en' ? `${m} min read` : `${m} min de lecture`;
+}
+
+// ════════════════════════════════════════════════════════════
+//  UX : RECHERCHE
+// ════════════════════════════════════════════════════════════
+function openSearch() {
+  document.getElementById('search-overlay').classList.add('open');
+  const input = document.getElementById('search-input');
+  input.value = '';
+  runSearch('');
+  setTimeout(() => input.focus(), 50);
+}
+function closeSearch() {
+  document.getElementById('search-overlay').classList.remove('open');
+}
+function runSearch(query) {
+  // Normalise : minuscules + retrait des accents (mbappe trouve Mbappé)
+  const norm = (s) => (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const q = norm(query.trim());
+  const pub = articles.filter(a => a.status === 'published');
+  const results = q === '' ? pub.slice(0, 6) : pub.filter(a => {
+    const hay = norm(a.title + ' ' + (a.titleEn||'') + ' ' + a.excerpt + ' ' + (a.content||'') + ' ' + a.category);
+    return hay.includes(q);
+  });
+  const box = document.getElementById('search-results');
+  if (results.length === 0) {
+    box.innerHTML = `<div class="search-empty">${currentLang === 'en' ? 'No article found' : 'Aucun article trouvé'} 🔍</div>`;
+    return;
+  }
+  box.innerHTML = results.map(a => {
+    const ttl = escapeHtml(currentLang === 'en' && a.titleEn ? a.titleEn : a.title);
+    return `<div class="search-result" onclick="closeSearch();openArticle(${a.id})">
+      <span class="category-badge ${getCatClass(a.category)}" style="font-size:9px">${a.category}</span>
+      <div>
+        <div class="search-result-title">${ttl}</div>
+        <div class="search-result-cat">${escapeHtml(a.author)} · ${escapeHtml(a.date)}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ════════════════════════════════════════════════════════════
+//  UX : FAVORIS (BOOKMARKS)
+// ════════════════════════════════════════════════════════════
+function toggleBookmark(id, ev) {
+  if (ev) ev.stopPropagation();
+  const idx = bookmarks.indexOf(id);
+  if (idx === -1) { bookmarks.push(id); toast(currentLang === 'en' ? '🔖 Saved!' : '🔖 Article sauvegardé !'); }
+  else { bookmarks.splice(idx, 1); toast(currentLang === 'en' ? 'Removed' : 'Retiré des favoris'); }
+  saveData();
+  // refresh affichage si on est sur la home ou l'article
+  document.querySelectorAll(`[data-bm="${id}"]`).forEach(el => {
+    el.classList.toggle('saved', bookmarks.includes(id));
+  });
+}
+
+// ════════════════════════════════════════════════════════════
+//  UX : VUES & TENDANCES
+// ════════════════════════════════════════════════════════════
+function registerView(id) {
+  views[id] = (views[id] || 0) + 1;
+  saveData();
+}
+function getViews(id) { return views[id] || 0; }
+
+// ════════════════════════════════════════════════════════════
+//  UX : ARTICLES SIMILAIRES
+// ════════════════════════════════════════════════════════════
+function renderRelated(article) {
+  const el = document.getElementById('related-section');
+  if (!el) return;
+  const pub = articles.filter(a => a.status === 'published' && a.id !== article.id);
+  // priorité même catégorie, complété par les plus récents
+  let related = pub.filter(a => a.category === article.category);
+  pub.forEach(a => { if (!related.includes(a)) related.push(a); });
+  related = related.slice(0, 4);
+  if (related.length === 0) { el.innerHTML = ''; return; }
+  el.innerHTML = `
+    <div class="comments-header" style="border-top:1px solid var(--border)">
+      <span class="comments-title">${currentLang === 'en' ? 'Keep reading' : 'À lire ensuite'}</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="related-grid">
+      ${related.map(a => {
+        const ttl = escapeHtml(currentLang === 'en' && a.titleEn ? a.titleEn : a.title);
+        return `<div class="related-card" onclick="openArticle(${a.id})">
+          <span class="category-badge ${getCatClass(a.category)}" style="font-size:9px">${a.category}</span>
+          <div class="related-card-title">${ttl}</div>
+          <div class="read-time" style="margin-top:8px">🕒 ${readTimeLabel(a.content)}</div>
+        </div>`;
+      }).join('')}
+    </div>`;
+}
+
+// ════════════════════════════════════════════════════════════
+//  UX : SCROLL (progression, retour haut, reveal)
+// ════════════════════════════════════════════════════════════
+function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+function onScroll() {
+  const scrollTopPos = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const pct = docHeight > 0 ? (scrollTopPos / docHeight) * 100 : 0;
+
+  // Barre de progression visible seulement sur un article
+  const onArticle = document.getElementById('page-article').classList.contains('active');
+  const bar = document.getElementById('reading-progress');
+  bar.style.width = onArticle ? pct + '%' : '0%';
+
+  // Bouton retour en haut
+  const btt = document.getElementById('back-to-top');
+  btt.classList.toggle('visible', scrollTopPos > 500);
+}
+
+let revealObserver;
+function setupReveal() {
+  if (revealObserver) revealObserver.disconnect();
+  revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObserver.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal:not(.in)').forEach(el => revealObserver.observe(el));
+}
+
+
+function t(key) {
+  return TRANSLATIONS[currentLang][key] || TRANSLATIONS['fr'][key];
+}
+
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.textContent === lang.toUpperCase()));
+  applyTranslations();
+  renderHome();
+  renderDiscussion();
+  // Si un article est ouvert, on le recharge dans la nouvelle langue
+  const articlePage = document.getElementById('page-article');
+  if (articlePage.classList.contains('active') && articlePage.dataset.articleId) {
+    openArticle(Number(articlePage.dataset.articleId), false);
+  }
+}
+
+function applyTranslations() {
+  const map = {
+    'tagline':'tagline','btn-forum':'forum','btn-admin':'admin',
+    'section-label':'sectionLabel','footer-desc':'footerDesc',
+    'footer-cat-title':'footerCatTitle','footer-info-title':'footerInfoTitle',
+    'footer-forum':'footerForum','footer-disclaimer':'footerDisclaimer',
+    'footer-mentions':'footerMentions','footer-privacy':'footerPrivacy',
+    'footer-cookies-link':'footerCookies','footer-cgu':'footerCgu','footer-contact':'footerContact',
+    'cookie-accept':'cookieAccept','cookie-refuse':'cookieRefuse',
+    'discussion-subtitle':'discussionSubtitle','new-thread-label':'newThreadLabel',
+    'thread-mod-note':'threadModNote','btn-start-discussion':'btnStartDiscussion',
+    'rules-title':'rulesTitle','stats-title':'statsTitle',
+    'stat-discussions':'statDiscussions','stat-messages':'statMessages',
+    'comments-title':'commentsTitle','moderation-note-text':'moderationNote',
+    'btn-submit-comment':'btnSubmitComment',
+    'ec-eyebrow':'ecEyebrow','ec-title':'ecTitle','ec-desc':'ecDesc',
+    'ec-btn':'ecBtn','ec-privacy':'ecPrivacy','ad-slot-home':'adSlot',
+  };
+  for (const [id, key] of Object.entries(map)) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = t(key);
+  }
+  // Rules list
+  const rulesList = document.getElementById('rules-list');
+  if (rulesList) {
+    rulesList.innerHTML = t('rules').map(r => `<li>${r}</li>`).join('');
+  }
+  // Texte cookies avec lien "En savoir plus" préservé
+  const cookieTextEl = document.getElementById('cookie-text');
+  if (cookieTextEl) {
+    const more = currentLang === 'en' ? 'Learn more' : 'En savoir plus';
+    cookieTextEl.innerHTML = t('cookieText') + ' <a onclick="showLegal(\'cookies\')">' + more + '</a>';
+  }
+}
+
+// ════════════════════════════════════════════════════════════
+//  PAGES
+// ════════════════════════════════════════════════════════════
+function showPage(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  window.scrollTo(0, 0);
+
+  // Quitter le back-office réinitialise l'état d'édition par sécurité
+  if (page !== 'backoffice') editingArticleId = null;
+
+  if (page === 'home') renderHome();
+  if (page === 'discussion') renderDiscussion();
+  if (page === 'backoffice') { renderBoArticles(); renderBoComments(); renderStats(); }
+}
+
+// ════════════════════════════════════════════════════════════
+//  PAGES LÉGALES (bilingue FR/EN)
+// ════════════════════════════════════════════════════════════
+const CONTACT_EMAIL = 'psgmagazine99@gmail.com';
+const LEGAL = {
+  fr: {
+    tabs: { mentions:'Mentions légales', privacy:'Confidentialité', cookies:'Cookies', cgu:'Conditions', contact:'Contact' },
+    updated: 'Dernière mise à jour : ',
+    mentions: `<h1>Mentions légales</h1>
+      <p class="legal-updated">__DATE__</p>
+      <div class="legal-highlight">⚠️ PSG Magazine est un site de fans indépendant, <strong>non officiel</strong> et <strong>non affilié</strong> au Paris Saint-Germain Football Club, ni à aucune de ses entités. "PSG" et "Paris Saint-Germain" sont des marques déposées appartenant à leurs propriétaires respectifs.</p>
+      <h2>Éditeur du site</h2>
+      <p>Le site PSGMagazine.com est édité à titre personnel et non commercial, dans un but informatif et passionnel autour du Paris Saint-Germain.</p>
+      <p>Contact : <a href="mailto:__EMAIL__">__EMAIL__</a></p>
+      <h2>Hébergement</h2>
+      <p>Le site est hébergé par son prestataire d'hébergement web. Les coordonnées complètes de l'hébergeur seront précisées lors de la mise en ligne.</p>
+      <h2>Propriété intellectuelle</h2>
+      <p>Les articles et analyses publiés sont la propriété de l'éditeur. Les logos, images et marques liés au Paris Saint-Germain restent la propriété de leurs détenteurs. Toute reproduction des contenus originaux du site sans autorisation est interdite.</p>
+      <h2>Responsabilité</h2>
+      <p>Les informations relayées (transferts, rumeurs) sont fournies à titre indicatif et font l'objet d'un système de fiabilité. L'éditeur ne saurait être tenu responsable d'éventuelles inexactitudes provenant de sources tierces.</p>`,
+    privacy: `<h1>Politique de confidentialité</h1>
+      <p class="legal-updated">__DATE__</p>
+      <p>Cette politique explique quelles données personnelles sont collectées sur PSGMagazine.com et comment elles sont utilisées, conformément au Règlement Général sur la Protection des Données (RGPD).</p>
+      <h2>Données collectées</h2>
+      <ul>
+        <li><strong>Newsletter</strong> : votre adresse email, uniquement si vous vous inscrivez volontairement.</li>
+        <li><strong>Commentaires & forum</strong> : le prénom/pseudo et la ville que vous renseignez librement.</li>
+        <li><strong>Données techniques</strong> : via les cookies de mesure d'audience et de publicité (voir Politique cookies).</li>
+      </ul>
+      <h2>Utilisation des données</h2>
+      <p>Vos données servent uniquement à : vous envoyer la newsletter (si inscrit), afficher vos commentaires, et améliorer le site. Elles ne sont jamais revendues à des tiers.</p>
+      <h2>Vos droits (RGPD)</h2>
+      <p>Vous disposez d'un droit d'accès, de rectification et de suppression de vos données. Pour l'exercer, écrivez à <a href="mailto:__EMAIL__">__EMAIL__</a>. Vous pouvez vous désinscrire de la newsletter à tout moment.</p>
+      <h2>Conservation</h2>
+      <p>Les données sont conservées tant que nécessaire au service concerné, puis supprimées sur demande.</p>`,
+    cookies: `<h1>Politique relative aux cookies</h1>
+      <p class="legal-updated">__DATE__</p>
+      <p>Un cookie est un petit fichier déposé sur votre appareil lors de la visite d'un site. PSGMagazine.com utilise des cookies pour les raisons suivantes :</p>
+      <h2>Cookies de mesure d'audience</h2>
+      <p>Ils nous aident à comprendre comment les visiteurs utilisent le site (pages vues, durée) afin de l'améliorer.</p>
+      <h2>Cookies publicitaires (Google AdSense)</h2>
+      <p>Le site affiche des publicités via Google AdSense, qui peut déposer des cookies pour proposer des annonces pertinentes. Pour en savoir plus, consultez les règles de confidentialité de Google.</p>
+      <h2>Votre consentement</h2>
+      <p>Lors de votre première visite, un bandeau vous permet d'accepter ou de refuser les cookies non essentiels. Vous pouvez modifier votre choix à tout moment via le bouton ci-dessous.</p>
+      <p><button class="cookie-btn cookie-btn-accept" style="background:var(--navy)" onclick="resetCookieConsent()">Revoir mon choix cookies</button></p>`,
+    cgu: `<h1>Conditions d'utilisation</h1>
+      <p class="legal-updated">__DATE__</p>
+      <p>En utilisant PSGMagazine.com, vous acceptez les présentes conditions.</p>
+      <h2>Utilisation du site</h2>
+      <p>Le site est destiné à un usage personnel et à la lecture d'informations sur le Paris Saint-Germain. Vous vous engagez à ne pas perturber son fonctionnement.</p>
+      <h2>Commentaires et forum</h2>
+      <p>En publiant un commentaire ou un message sur le forum, vous vous engagez à rester respectueux. Sont interdits : insultes, propos haineux, racistes ou discriminatoires, spam, liens commerciaux et contenus hors-sujet. Une modération automatique et manuelle s'applique, et tout contenu inapproprié peut être supprimé sans préavis.</p>
+      <h2>Contenus</h2>
+      <p>Les analyses reflètent l'opinion personnelle de l'éditeur. Les informations de transfert sont accompagnées d'un indice de fiabilité et doivent être considérées avec le recul nécessaire.</p>`,
+    contact: `<h1>Contact</h1>
+      <p class="legal-updated">__DATE__</p>
+      <p>Une question, une remarque, une correction à signaler, ou une proposition de partenariat ? Écrivez-nous :</p>
+      <div class="legal-highlight">📧 <a href="mailto:__EMAIL__">__EMAIL__</a></div>
+      <p>Nous faisons notre possible pour répondre dans les meilleurs délais. Pour toute demande relative à vos données personnelles, précisez-le dans votre message.</p>`
+  },
+  en: {
+    tabs: { mentions:'Legal notice', privacy:'Privacy', cookies:'Cookies', cgu:'Terms', contact:'Contact' },
+    updated: 'Last updated: ',
+    mentions: `<h1>Legal notice</h1>
+      <p class="legal-updated">__DATE__</p>
+      <div class="legal-highlight">⚠️ PSG Magazine is an independent fan site, <strong>unofficial</strong> and <strong>not affiliated</strong> with Paris Saint-Germain Football Club or any of its entities. "PSG" and "Paris Saint-Germain" are registered trademarks of their respective owners.</div>
+      <h2>Publisher</h2>
+      <p>PSGMagazine.com is published on a personal, non-commercial basis, for informational purposes around Paris Saint-Germain.</p>
+      <p>Contact: <a href="mailto:__EMAIL__">__EMAIL__</a></p>
+      <h2>Hosting</h2>
+      <p>The site is hosted by its web hosting provider. Full hosting details will be provided upon going live.</p>
+      <h2>Intellectual property</h2>
+      <p>Published articles and analysis are the property of the publisher. Logos, images and trademarks related to Paris Saint-Germain remain the property of their owners. Any reproduction of the site's original content without permission is prohibited.</p>
+      <h2>Liability</h2>
+      <p>Relayed information (transfers, rumours) is provided for guidance and carries a reliability rating. The publisher cannot be held responsible for inaccuracies originating from third-party sources.</p>`,
+    privacy: `<h1>Privacy policy</h1>
+      <p class="legal-updated">__DATE__</p>
+      <p>This policy explains what personal data is collected on PSGMagazine.com and how it is used, in accordance with the GDPR.</p>
+      <h2>Data collected</h2>
+      <ul>
+        <li><strong>Newsletter</strong>: your email address, only if you voluntarily subscribe.</li>
+        <li><strong>Comments & forum</strong>: the first name/nickname and city you freely provide.</li>
+        <li><strong>Technical data</strong>: via audience measurement and advertising cookies (see Cookie policy).</li>
+      </ul>
+      <h2>Use of data</h2>
+      <p>Your data is used only to: send you the newsletter (if subscribed), display your comments, and improve the site. It is never sold to third parties.</p>
+      <h2>Your rights (GDPR)</h2>
+      <p>You have the right to access, correct and delete your data. To exercise it, email <a href="mailto:__EMAIL__">__EMAIL__</a>. You can unsubscribe from the newsletter at any time.</p>
+      <h2>Retention</h2>
+      <p>Data is kept as long as necessary for the relevant service, then deleted upon request.</p>`,
+    cookies: `<h1>Cookie policy</h1>
+      <p class="legal-updated">__DATE__</p>
+      <p>A cookie is a small file placed on your device when visiting a site. PSGMagazine.com uses cookies for the following reasons:</p>
+      <h2>Audience measurement cookies</h2>
+      <p>They help us understand how visitors use the site (page views, duration) to improve it.</p>
+      <h2>Advertising cookies (Google AdSense)</h2>
+      <p>The site displays ads via Google AdSense, which may set cookies to serve relevant ads. To learn more, see Google's privacy policy.</p>
+      <h2>Your consent</h2>
+      <p>On your first visit, a banner lets you accept or refuse non-essential cookies. You can change your choice at any time using the button below.</p>
+      <p><button class="cookie-btn cookie-btn-accept" style="background:var(--navy)" onclick="resetCookieConsent()">Review my cookie choice</button></p>`,
+    cgu: `<h1>Terms of use</h1>
+      <p class="legal-updated">__DATE__</p>
+      <p>By using PSGMagazine.com, you accept these terms.</p>
+      <h2>Use of the site</h2>
+      <p>The site is intended for personal use and reading information about Paris Saint-Germain. You agree not to disrupt its operation.</p>
+      <h2>Comments and forum</h2>
+      <p>By posting a comment or forum message, you agree to remain respectful. Prohibited: insults, hateful, racist or discriminatory remarks, spam, commercial links and off-topic content. Automatic and manual moderation applies, and any inappropriate content may be removed without notice.</p>
+      <h2>Content</h2>
+      <p>Analysis reflects the publisher's personal opinion. Transfer information carries a reliability rating and should be considered with appropriate caution.</p>`,
+    contact: `<h1>Contact</h1>
+      <p class="legal-updated">__DATE__</p>
+      <p>A question, a remark, a correction to report, or a partnership proposal? Email us:</p>
+      <div class="legal-highlight">📧 <a href="mailto:__EMAIL__">__EMAIL__</a></div>
+      <p>We do our best to reply promptly. For any request regarding your personal data, please mention it in your message.</p>`
+  }
+};
+
+function showLegal(section) {
+  const L = LEGAL[currentLang] || LEGAL.fr;
+  const dateStr = new Date().toLocaleDateString(currentLang === 'en' ? 'en-GB' : 'fr-FR', { day:'numeric', month:'long', year:'numeric' });
+  let content = (L[section] || L.mentions)
+    .replace(/__EMAIL__/g, CONTACT_EMAIL)
+    .replace(/__DATE__/g, L.updated + dateStr);
+  document.getElementById('legal-content').innerHTML = content;
+  // Onglets : libellés + actif
+  document.querySelectorAll('.legal-tab').forEach(t => {
+    const key = t.dataset.legal;
+    t.textContent = L.tabs[key];
+    t.classList.toggle('active', key === section);
+  });
+  showPage('legal');
+}
+
+// ════════════════════════════════════════════════════════════
+//  CONSENTEMENT COOKIES
+// ════════════════════════════════════════════════════════════
+function setCookieConsent(choice) {
+  Store.set('psgmag_cookie_consent', choice);
+  document.getElementById('cookie-banner').classList.remove('show');
+  toast(choice === 'accepted'
+    ? (currentLang === 'en' ? '✅ Cookies accepted' : '✅ Cookies acceptés')
+    : (currentLang === 'en' ? 'Cookies refused' : 'Cookies refusés'));
+  // Note : à la mise en ligne, c'est ici qu'on activera/bloquera réellement AdSense selon le choix.
+}
+function resetCookieConsent() {
+  Store.set('psgmag_cookie_consent', '');
+  document.getElementById('cookie-banner').classList.add('show');
+  showPage('home');
+}
+function initCookieBanner() {
+  const consent = Store.get('psgmag_cookie_consent');
+  if (!consent) document.getElementById('cookie-banner').classList.add('show');
+}
+
+// ════════════════════════════════════════════════════════════
+//  HOME RENDER
+// ════════════════════════════════════════════════════════════
+let activeFilter = 'all';
+
+function filterCat(cat) {
+  activeFilter = cat;
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  const map = {'all':'nav-all','Transferts':'nav-transferts','Matchs':'nav-matchs','Ligue des Champions':'nav-ldc','Mercato':'nav-mercato','Rumeurs':'nav-rumeurs','Analyse':'nav-analyse','Formation':'nav-formation'};
+  const btn = document.getElementById(map[cat]);
+  if (btn) btn.classList.add('active');
+  // Si on n'est pas sur l'accueil (ex: en train de lire un article), on y revient
+  const onHome = document.getElementById('page-home').classList.contains('active');
+  if (!onHome) { showPage('home'); }
+  renderHome();
+}
+
+function renderHome() {
+  const pub = articles.filter(a => a.status === 'published');
+  const filtered = activeFilter === 'all' ? pub : pub.filter(a => a.category === activeFilter);
+
+  // Featured
+  const featured = filtered.find(a => a.featured) || filtered[0];
+  const rest = filtered.filter(a => a !== featured);
+
+  const grid = document.getElementById('home-grid');
+  if (!featured) {
+    grid.innerHTML = `<div style="padding:60px;color:var(--muted);text-align:center;grid-column:1/-1">
+      <p style="font-size:18px">Aucun article pour cette catégorie.</p>
+    </div>`;
+    document.getElementById('articles-grid').innerHTML = '';
+    return;
+  }
+
+  const title = escapeHtml(currentLang === 'en' && featured.titleEn ? featured.titleEn : featured.title);
+  const excerpt = escapeHtml(currentLang === 'en' && featured.excerptEn ? featured.excerptEn : featured.excerpt);
+
+  grid.innerHTML = `
+    <div class="featured-article" onclick="openArticle(${featured.id})">
+      <div class="featured-eyebrow">
+        <span class="category-badge ${getCatClass(featured.category)}">${featured.category}</span>
+        ${getReliabilityBadge(featured.reliability)}
+        <span class="featured-badge">★ À LA UNE</span>
+      </div>
+      ${articleImageHTML(featured, 'featured')}
+      <h2 class="featured-title">${title}</h2>
+      <p class="featured-excerpt">${excerpt}</p>
+      <div class="article-meta">
+        <strong>${escapeHtml(featured.author)}</strong>
+        <div class="meta-dot"></div>
+        <span>${escapeHtml(featured.date)}</span>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-title">${currentLang === 'en' ? 'Also to read' : 'À lire aussi'}</div>
+      ${rest.slice(0,4).map((a,i) => {
+        const t2 = escapeHtml(currentLang === 'en' && a.titleEn ? a.titleEn : a.title);
+        return `<div class="sidebar-article" onclick="openArticle(${a.id})">
+          <div class="sidebar-num">0${i+1}</div>
+          <div class="sidebar-article-body">
+            <div class="sidebar-article-title">${t2}</div>
+            <div class="sidebar-article-meta">${escapeHtml(a.author)} · ${escapeHtml(a.date)}</div>
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+  `;
+
+  // Grid
+  const agrid = document.getElementById('articles-grid');
+  agrid.innerHTML = rest.slice(4).map(a => {
+    const t2 = escapeHtml(currentLang === 'en' && a.titleEn ? a.titleEn : a.title);
+    const ex2 = escapeHtml(currentLang === 'en' && a.excerptEn ? a.excerptEn : a.excerpt);
+    const saved = bookmarks.includes(a.id);
+    return `<div class="article-card reveal" onclick="openArticle(${a.id})">
+      ${articleImageHTML(a, 'card')}
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+        <span class="category-badge ${getCatClass(a.category)}">${a.category}</span>
+        ${getReliabilityBadge(a.reliability)}
+      </div>
+      <div class="article-card-title">${t2}</div>
+      <div class="article-card-excerpt">${ex2}</div>
+      <div class="article-meta">
+        <strong>${escapeHtml(a.author)}</strong>
+        <div class="meta-dot"></div>
+        <span class="read-time">🕒 ${readTimeLabel(a.content)}</span>
+        <div class="meta-dot"></div>
+        <span class="view-count">👁️ ${getViews(a.id)}</span>
+        <div style="flex:1"></div>
+        <button class="bookmark-btn ${saved ? 'saved' : ''}" data-bm="${a.id}" onclick="toggleBookmark(${a.id},event)" title="Sauvegarder">${saved ? '🔖' : '🏷️'}</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Masque le titre "Derniers articles" + l'emplacement pub s'il n'y a aucun article dans cette grille
+  const hasMore = rest.slice(4).length > 0;
+  const latestHeader = document.getElementById('latest-section-header');
+  const adSlot = document.getElementById('ad-slot-home');
+  if (latestHeader) latestHeader.style.display = hasMore ? '' : 'none';
+  if (adSlot) adSlot.style.display = hasMore ? '' : 'none';
+
+  setupReveal();
+}
+
+// ════════════════════════════════════════════════════════════
+//  ARTICLE
+// ════════════════════════════════════════════════════════════
+function openArticle(id, countView = true) {
+  const a = articles.find(x => x.id === id);
+  if (!a) return;
+
+  const title = currentLang === 'en' && a.titleEn ? a.titleEn : a.title;
+  const bodyText = currentLang === 'en' && a.contentEn ? a.contentEn : a.content;
+  const initials = a.author.split(' ').map(w => w[0]).join('').toUpperCase().slice(0,2);
+
+  if (countView) registerView(id);
+  const saved = bookmarks.includes(id);
+
+  document.getElementById('article-category-badge').innerHTML = `<span class="category-badge ${getCatClass(a.category)}">${a.category}</span> ${getReliabilityBadge(a.reliability)}`;
+  document.getElementById('article-full-title').textContent = title;
+  document.getElementById('author-avatar').textContent = initials;
+  document.getElementById('article-author').textContent = a.author;
+  document.getElementById('article-date').innerHTML = `${a.date} · <span class="read-time">🕒 ${readTimeLabel(bodyText)}</span> · <span class="view-count">👁️ ${getViews(id)}</span> · <button class="bookmark-btn ${saved ? 'saved' : ''}" data-bm="${id}" onclick="toggleBookmark(${id},event)" title="Sauvegarder">${saved ? '🔖' : '🏷️'}</button>`;
+  document.getElementById('article-image-container').innerHTML = articleImageHTML(a, 'full');
+  document.getElementById('article-reliability-meter').innerHTML = getReliabilityMeter(a.reliability, a.source);
+  document.getElementById('article-full-body').innerHTML = renderArticleBody(bodyText);
+
+  // Barre de partage social
+  const url = 'https://psgmagazine.com/?article=' + id;
+  const shareText = encodeURIComponent(title + ' — PSG Magazine');
+  document.getElementById('article-share-bar').innerHTML = `
+    <div class="share-bar">
+      <span class="share-label">${currentLang === 'en' ? 'Share' : 'Partager'}</span>
+      <button class="share-btn x" onclick="shareOn('x','${shareText}','${url}')">𝕏 Twitter</button>
+      <button class="share-btn wa" onclick="shareOn('wa','${shareText}','${url}')">WhatsApp</button>
+      <button class="share-btn copy" onclick="copyLink('${url}')">📋 ${currentLang === 'en' ? 'Copy link' : 'Copier le lien'}</button>
+    </div>`;
+
+  // SEO dynamique : met à jour le titre + meta pour cet article
+  updateArticleSEO(a, title);
+
+  renderRelated(a);
+  renderComments(id);
+  showPage('article');
+  document.getElementById('page-article').dataset.articleId = id;
+}
+
+// Partage social
+function shareOn(network, text, url) {
+  const u = encodeURIComponent(url);
+  let shareUrl = '';
+  if (network === 'x') shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${u}`;
+  if (network === 'wa') shareUrl = `https://wa.me/?text=${text}%20${u}`;
+  window.open(shareUrl, '_blank', 'width=600,height=400');
+}
+
+function copyLink(url) {
+  navigator.clipboard?.writeText(url).then(
+    () => toast('✅ Lien copié !'),
+    () => toast('Lien : ' + url)
+  );
+}
+
+// SEO dynamique par article
+function updateArticleSEO(a, title) {
+  document.title = title + ' — PSG Magazine';
+  const setMeta = (sel, val) => { const el = document.querySelector(sel); if (el) el.setAttribute('content', val); };
+  setMeta('meta[name="description"]', a.excerpt);
+  setMeta('meta[property="og:title"]', title);
+  setMeta('meta[property="og:description"]', a.excerpt);
+  setMeta('meta[property="og:type"]', 'article');
+  setMeta('meta[name="twitter:title"]', title);
+  setMeta('meta[name="twitter:description"]', a.excerpt);
+  // Schema.org NewsArticle
+  const schema = document.getElementById('schema-org');
+  if (schema) {
+    schema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "headline": title,
+      "description": a.excerpt,
+      "author": { "@type": "Person", "name": a.author },
+      "publisher": { "@type": "NewsMediaOrganization", "name": "PSG Magazine" },
+      "datePublished": a.date,
+      "articleSection": a.category
+    });
+  }
+}
+
+// ════════════════════════════════════════════════════════════
+//  COMMENTS
+// ════════════════════════════════════════════════════════════
+function renderComments(articleId) {
+  const list = document.getElementById('comments-list');
+  const artComments = comments.filter(c => String(c.articleId) === String(articleId));
+  if (artComments.length === 0) {
+    list.innerHTML = `<p style="color:var(--muted);font-size:14px;padding:16px 0">${currentLang === 'en' ? 'No comments yet. Be the first!' : 'Aucun commentaire. Soyez le premier !'}</p>`;
+    return;
+  }
+  list.innerHTML = artComments.map(c => {
+    const initials = escapeHtml((c.name || '?').slice(0,2).toUpperCase());
+    const colors = ['#001B3D','#E8001C','#C9973A','#2D5A27','#5A2D72'];
+    const color = colors[(c.name || '?').charCodeAt(0) % colors.length];
+    return `<div class="comment-item">
+      <div class="comment-header">
+        <div class="comment-avatar" style="background:${color}">${initials}</div>
+        <div>
+          <div class="comment-author">${escapeHtml(c.name)}${c.city ? ' · ' + escapeHtml(c.city) : ''}</div>
+        </div>
+        <div class="comment-date">${escapeHtml(c.date)}</div>
+      </div>
+      <div class="comment-body ${c.moderated ? 'moderated' : ''}">${c.moderated ? (currentLang === 'en' ? '[Comment removed by moderation]' : '[Commentaire supprimé par la modération]') : escapeHtml(c.text)}</div>
+    </div>`;
+  }).join('');
+}
+
+function submitComment() {
+  const name = document.getElementById('comment-name').value.trim();
+  const city = document.getElementById('comment-city').value.trim();
+  const text = document.getElementById('comment-text').value.trim();
+  const articleId = parseInt(document.getElementById('page-article').dataset.articleId);
+
+  if (!name || !text) { toast('⚠️ Prénom et commentaire requis'); return; }
+  if (isBot(name, text)) { toast('🤖 Commentaire détecté comme spam'); return; }
+
+  const moderated = isBanned(text);
+  const comment = {
+    id: Date.now(), articleId, name, city, text, date: new Date().toLocaleDateString('fr-FR'),
+    moderated
+  };
+  comments.push(comment);
+  saveData();
+  renderComments(articleId);
+  document.getElementById('comment-name').value = '';
+  document.getElementById('comment-city').value = '';
+  document.getElementById('comment-text').value = '';
+  toast(moderated ? '⚠️ Commentaire modéré automatiquement' : '✅ Commentaire publié !');
+  updateStats();
+}
+
+// ════════════════════════════════════════════════════════════
+//  DISCUSSION / THREADS
+// ════════════════════════════════════════════════════════════
+function renderDiscussion() {
+  renderThreads();
+  updateStats();
+}
+
+function renderThreads() {
+  const list = document.getElementById('threads-list');
+  if (threads.length === 0) {
+    list.innerHTML = `<p style="color:var(--muted);font-size:14px;padding:16px 0">${currentLang === 'en' ? 'No discussions yet. Start one!' : 'Aucune discussion. Lancez-en une !'}</p>`;
+    return;
+  }
+  list.innerHTML = threads.map(th => {
+    // Détecte la langue probable du message ; affiche le bouton seulement si différente de l'UI
+    const msgLang = th.lang || guessLang(th.title + ' ' + th.body);
+    const showTranslate = msgLang !== currentLang;
+    const translateLabel = currentLang === 'en' ? 'Translate' : 'Traduire';
+    return `
+    <div class="thread-item">
+      <div class="thread-item-header">
+        <div class="thread-item-title" id="th-title-${th.id}">${escapeHtml(th.title)}</div>
+        <div class="thread-replies">💬 ${th.replies || 0}</div>
+      </div>
+      <div class="thread-item-excerpt" id="th-body-${th.id}">${escapeHtml(th.body)}</div>
+      <div class="thread-item-footer" style="justify-content:space-between">
+        <span class="article-meta"><strong>${escapeHtml(th.author)}</strong> <div class="meta-dot"></div> ${escapeHtml(th.date)}</span>
+        ${showTranslate ? `<button class="thread-translate-btn" id="th-tr-btn-${th.id}" onclick="translateThread(${th.id})">🌐 ${translateLabel}</button>` : ''}
+      </div>
+      <div class="thread-translation" id="th-tr-${th.id}"></div>
+    </div>`;
+  }).join('');
+}
+
+// Devine grossièrement la langue d'un texte (français vs anglais) via des mots fréquents.
+function guessLang(text) {
+  const t = ' ' + text.toLowerCase() + ' ';
+  const frMarkers = [' le ',' la ',' les ',' des ',' une ',' un ',' est ',' et ',' que ',' qui ',' pour ',' avec ',' pas ',' plus ',' je ',' nous ',' vous ',' c\'est ',' ça ',' à ',' où ',' déjà ',' très '];
+  const enMarkers = [' the ',' is ',' are ',' and ',' that ',' this ',' for ',' with ',' you ',' we ',' not ',' more ',' i ',' to ',' of ',' it ',' he ',' they ',' very ',' should '];
+  let fr = 0, en = 0;
+  frMarkers.forEach(m => { if (t.includes(m)) fr++; });
+  enMarkers.forEach(m => { if (t.includes(m)) en++; });
+  // accents = indice fort de français
+  if (/[àâçéèêëîïôûùü]/.test(text)) fr += 2;
+  return en > fr ? 'en' : 'fr';
+}
+
+// Traduit un message du forum à la demande (bouton sous le message)
+async function translateThread(id) {
+  const th = threads.find(t => t.id === id);
+  if (!th) return;
+  const box = document.getElementById('th-tr-' + id);
+  const btn = document.getElementById('th-tr-btn-' + id);
+
+  // Si déjà traduit et affiché → on masque (bascule)
+  if (box.dataset.shown === '1') {
+    box.innerHTML = ''; box.dataset.shown = '0';
+    if (btn) btn.textContent = (currentLang === 'en' ? '🌐 Translate' : '🌐 Traduire');
+    return;
+  }
+  // Si on a déjà la traduction en cache
+  const cacheKey = currentLang;
+  if (th._tr && th._tr[cacheKey]) {
+    showThreadTranslation(id, th._tr[cacheKey]);
+    return;
+  }
+
+  if (btn) { btn.disabled = true; btn.textContent = (currentLang === 'en' ? '⏳ Translating...' : '⏳ Traduction...'); }
+  const target = currentLang === 'en' ? 'anglais' : 'français';
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514', max_tokens: 600,
+        messages: [{ role: 'user', content: `Traduis ce message de forum football en ${target}. Garde le ton naturel et familier d'un fan. Réponds UNIQUEMENT avec un JSON valide sans balises : {"title":"...","body":"..."}\n\nTitre: ${th.title}\n\nMessage: ${th.body}` }]
+      })
+    });
+    const data = await res.json();
+    let raw = (data.content?.[0]?.text || '').replace(/```json|```/g, '').trim();
+    const parsed = JSON.parse(raw);
+    th._tr = th._tr || {};
+    th._tr[cacheKey] = parsed;
+    showThreadTranslation(id, parsed);
+  } catch (e) {
+    showThreadTranslation(id, null);
+  }
+  if (btn) btn.disabled = false;
+}
+
+function showThreadTranslation(id, parsed) {
+  const box = document.getElementById('th-tr-' + id);
+  const btn = document.getElementById('th-tr-btn-' + id);
+  if (!parsed) {
+    box.innerHTML = `<div class="thread-translation-inner" style="color:var(--muted)">${currentLang === 'en' ? 'Translation unavailable (needs the site online).' : 'Traduction indisponible (nécessite le site en ligne).'}</div>`;
+  } else {
+    box.innerHTML = `<div class="thread-translation-inner">
+      <div class="thread-translation-label">🌐 ${currentLang === 'en' ? 'Translated' : 'Traduit'}</div>
+      <strong>${escapeHtml(parsed.title || '')}</strong>
+      <div style="margin-top:4px">${escapeHtml(parsed.body || '')}</div>
+    </div>`;
+  }
+  box.dataset.shown = '1';
+  if (btn) btn.textContent = (currentLang === 'en' ? '🌐 Hide' : '🌐 Masquer');
+}
+
+function submitThread() {
+  const author = document.getElementById('thread-author').value.trim();
+  const title = document.getElementById('thread-title-input').value.trim();
+  const body = document.getElementById('thread-body').value.trim();
+
+  if (!author || !title || !body) { toast('⚠️ Tous les champs sont requis'); return; }
+  if (isBot(author, body)) { toast('🤖 Publication détectée comme spam'); return; }
+  if (isBanned(title) || isBanned(body)) { toast('⚠️ Contenu inapproprié détecté'); return; }
+
+  threads.unshift({
+    id: Date.now(), author, title, body, lang: guessLang(title + ' ' + body),
+    date: new Date().toLocaleDateString('fr-FR'), replies: 0
+  });
+  saveData();
+  renderThreads();
+  document.getElementById('thread-author').value = '';
+  document.getElementById('thread-title-input').value = '';
+  document.getElementById('thread-body').value = '';
+  toast('✅ Discussion lancée !');
+  updateStats();
+}
+
+function updateStats() {
+  const pubCount = articles.filter(a => a.status === 'published').length;
+  const draftCount = articles.filter(a => a.status === 'draft').length;
+  document.getElementById('stat-threads-count').textContent = threads.length;
+  document.getElementById('stat-comments-count').textContent = comments.length;
+  const sp = document.getElementById('stat-published');
+  const sd = document.getElementById('stat-drafts');
+  const sc = document.getElementById('stat-total-comments');
+  if (sp) sp.textContent = pubCount;
+  if (sd) sd.textContent = draftCount;
+  if (sc) sc.textContent = comments.length;
+  const ss = document.getElementById('stat-subscribers');
+  if (ss) ss.textContent = subscribers.length;
+  const sl = document.getElementById('subscribers-list');
+  if (sl) sl.innerHTML = subscribers.length ? subscribers.map(e => `<div>📧 ${escapeHtml(e)}</div>`).join('') : '<span style="color:var(--muted)">Aucun abonné pour l\'instant. Le formulaire en page d\'accueil les collectera ici.</span>';
+}
+
+// ════════════════════════════════════════════════════════════
+//  BACK-OFFICE
+// ════════════════════════════════════════════════════════════
+function showBoSection(section) {
+  ['articles','new-article','comments','stats'].forEach(s => {
+    document.getElementById('bo-section-' + s).classList.toggle('hidden', s !== section);
+  });
+  ['articles','new','comments','stats'].forEach(s => {
+    document.getElementById('bo-nav-' + s)?.classList.remove('active');
+  });
+  const navMap = {'articles':'articles','new-article':'new','comments':'comments','stats':'stats'};
+  document.getElementById('bo-nav-' + (navMap[section] || section))?.classList.add('active');
+
+  if (section === 'new-article' && !editingArticleId) {
+    document.getElementById('editor-page-title').textContent = 'Nouvel article';
+    document.getElementById('editor-title').value = '';
+    document.getElementById('editor-body').value = '';
+    document.getElementById('editor-excerpt').value = '';
+    document.getElementById('editor-category').value = 'Transferts';
+    document.getElementById('editor-featured').value = '0';
+    document.getElementById('editor-reliability').value = 'confirmed';
+    document.getElementById('editor-source').value = '';
+    document.getElementById('editor-title-en').value = '';
+    document.getElementById('editor-excerpt-en').value = '';
+    document.getElementById('editor-body-en').value = '';
+    currentArticleImage = '';
+    showImagePreview('');
+    updateWordCount();
+  }
+}
+
+function renderBoArticles() {
+  const list = document.getElementById('bo-articles-list');
+  if (articles.length === 0) {
+    list.innerHTML = '<div style="padding:24px;text-align:center;color:var(--muted)">Aucun article.</div>';
+    return;
+  }
+  list.innerHTML = articles.map(a => `
+    <div class="bo-table-row">
+      <div class="bo-article-title-cell">${escapeHtml(a.title)}</div>
+      <div class="bo-cell"><span class="category-badge ${getCatClass(a.category)}" style="font-size:9px">${a.category}</span></div>
+      <div class="bo-cell">${a.date}</div>
+      <div class="bo-cell"><span class="status-badge ${a.status === 'published' ? 'status-published' : 'status-draft'}">${a.status === 'published' ? 'Publié' : 'Brouillon'}</span></div>
+      <div class="bo-actions">
+        <button class="bo-btn bo-btn-edit" onclick="editArticle(${a.id})">Éditer</button>
+        <button class="bo-btn bo-btn-delete" onclick="deleteArticle(${a.id})">Suppr.</button>
+      </div>
+    </div>
+  `).join('');
+}
+
+// Nouvel article : on réinitialise explicitement l'état d'édition pour ne jamais
+// écraser par erreur un article qu'on était en train de modifier.
+function newArticle() {
+  editingArticleId = null;
+  showBoSection('new-article'); // le reset des champs se fait dans showBoSection quand !editingArticleId
+}
+
+function editArticle(id) {
+  const a = articles.find(x => x.id === id);
+  if (!a) return;
+  editingArticleId = id;
+  document.getElementById('editor-page-title').textContent = 'Modifier l\'article';
+  document.getElementById('editor-title').value = a.title;
+  document.getElementById('editor-body').value = a.content;
+  document.getElementById('editor-excerpt').value = a.excerpt || '';
+  document.getElementById('editor-category').value = a.category;
+  document.getElementById('editor-featured').value = a.featured ? '1' : '0';
+  document.getElementById('editor-reliability').value = a.reliability || 'confirmed';
+  document.getElementById('editor-source').value = a.source || '';
+  document.getElementById('editor-title-en').value = a.titleEn || '';
+  document.getElementById('editor-excerpt-en').value = a.excerptEn || '';
+  document.getElementById('editor-body-en').value = a.contentEn || '';
+  currentArticleImage = a.image || '';
+  showImagePreview(currentArticleImage);
+  updateWordCount();
+  showBoSection('new-article');
+}
+
+function deleteArticle(id) {
+  if (!confirm('Supprimer cet article ?')) return;
+  articles = articles.filter(a => a.id !== id);
+  saveData();
+  renderBoArticles();
+  renderStats();
+  renderHome();
+  toast('🗑️ Article supprimé');
+}
+
+// Affiche/masque le panneau de relecture EN
+function toggleEnReview() {
+  const panel = document.getElementById('en-review-panel');
+  const chevron = document.getElementById('en-review-chevron');
+  const hidden = panel.classList.toggle('hidden');
+  chevron.textContent = hidden ? '▾' : '▴';
+}
+
+// Pré-traduit maintenant (bouton dans le panneau EN) pour relecture avant publication
+async function autoTranslateNow() {
+  const title = document.getElementById('editor-title').value.trim();
+  const content = document.getElementById('editor-body').value.trim();
+  const excerpt = document.getElementById('editor-excerpt').value.trim() || content.slice(0, 120);
+  if (!title || !content) { toast('⚠️ Écris d\'abord le titre et le contenu'); return; }
+
+  const btn = document.getElementById('btn-auto-translate');
+  btn.disabled = true; btn.textContent = '🌍 Traduction en cours...';
+  const tr = await translateArticle(title, excerpt, content);
+  btn.disabled = false; btn.textContent = '⚡ Pré-traduire maintenant avec l\'IA';
+
+  if (tr) {
+    document.getElementById('editor-title-en').value = tr.titleEn || '';
+    document.getElementById('editor-excerpt-en').value = tr.excerptEn || '';
+    document.getElementById('editor-body-en').value = tr.contentEn || '';
+    toast('✅ Traduction prête — tu peux la relire et l\'ajuster');
+  } else {
+    toast('⚠️ Traduction indisponible (nécessite le site en ligne)');
+  }
+}
+
+// Traduction automatique d'un article via l'IA. Renvoie {titleEn, excerptEn, contentEn}.
+// Si l'appel échoue (ou en local), renvoie null — l'article reste publié en FR.
+async function translateArticle(title, excerpt, content) {
+  try {
+    const prompt = `Tu es traducteur professionnel pour PSGMagazine.com, magazine football. Traduis en anglais le titre, l'extrait et le contenu ci-dessous en gardant le ton journalistique et la passion foot. Garde exactement la même structure de paragraphes pour le contenu.
+
+Réponds UNIQUEMENT avec un objet JSON valide, sans texte avant ni après, sans balises markdown. Format exact :
+{"titleEn": "...", "excerptEn": "...", "contentEn": "..."}
+
+TITRE : ${title}
+
+EXTRAIT : ${excerpt}
+
+CONTENU : ${content}`;
+
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 2000,
+        messages: [{ role: 'user', content: prompt }]
+      })
+    });
+    const data = await response.json();
+    let raw = data.content?.[0]?.text || '';
+    raw = raw.replace(/```json|```/g, '').trim();
+    const parsed = JSON.parse(raw);
+    if (parsed.titleEn && parsed.contentEn) return parsed;
+    return null;
+  } catch (e) {
+    return null;
+  }
+}
+
+let isSaving = false;
+// Annulation de l'édition avec garde-fou si du contenu non sauvegardé est présent
+function cancelEdit() {
+  const title = document.getElementById('editor-title')?.value.trim() || '';
+  const body = document.getElementById('editor-body')?.value.trim() || '';
+  if ((title || body) && !confirm('Quitter sans enregistrer ? Le contenu non sauvegardé sera perdu.')) return;
+  editingArticleId = null;
+  showBoSection('articles');
+}
+
+async function saveArticle(status) {
+  if (isSaving) return; // verrou anti double-clic (brouillon + publier)
+  const title = document.getElementById('editor-title').value.trim();
+  const content = document.getElementById('editor-body').value.trim();
+  if (!title || !content) { toast('⚠️ Titre et contenu requis'); return; }
+  isSaving = true;
+
+  const category = document.getElementById('editor-category').value;
+  const excerpt = document.getElementById('editor-excerpt').value.trim() || content.slice(0, 120) + '...';
+  const featured = document.getElementById('editor-featured').value === '1';
+  const reliability = document.getElementById('editor-reliability').value;
+  const source = document.getElementById('editor-source').value.trim();
+  const date = new Date().toLocaleDateString('fr-FR', {day:'numeric',month:'long',year:'numeric'});
+
+  // Champs EN éventuellement déjà saisis/relus manuellement
+  let titleEn = document.getElementById('editor-title-en')?.value.trim() || '';
+  let excerptEn = document.getElementById('editor-excerpt-en')?.value.trim() || '';
+  let contentEn = document.getElementById('editor-body-en')?.value.trim() || '';
+
+  // Traduction automatique à la publication (si pas déjà traduit à la main)
+  if (status === 'published' && (!titleEn || !contentEn)) {
+    const btnPublish = document.getElementById('btn-publish');
+    if (btnPublish) { btnPublish.disabled = true; btnPublish.textContent = '🌍 Traduction en anglais...'; }
+    toast('🌍 Traduction automatique en cours...');
+    const tr = await translateArticle(title, excerpt, content);
+    if (tr) {
+      titleEn = tr.titleEn; excerptEn = tr.excerptEn; contentEn = tr.contentEn;
+      toast('✅ Article traduit en anglais !');
+    } else {
+      toast('⚠️ Traduction indisponible — publié en FR (traduisible plus tard)');
+    }
+    if (btnPublish) { btnPublish.disabled = false; btnPublish.textContent = 'Publier l\'article'; }
+  }
+
+  if (featured) articles.forEach(a => { a.featured = false; });
+
+  if (editingArticleId) {
+    const idx = articles.findIndex(a => a.id === editingArticleId);
+    if (idx !== -1) {
+      articles[idx] = { ...articles[idx], title, titleEn, content, contentEn, category, excerpt, excerptEn, featured, reliability, source, status, date, image: currentArticleImage };
+    }
+    editingArticleId = null;
+  } else {
+    articles.unshift({ id: Date.now(), title, titleEn, content, contentEn, category, excerpt, excerptEn, featured, reliability, source, status, date, author: 'Ayoub', image: currentArticleImage });
+  }
+
+  saveData();
+  renderBoArticles();
+  renderStats();
+  renderHome();
+  showBoSection('articles');
+  toast(status === 'published' ? '🚀 Article publié !' : '💾 Brouillon enregistré');
+  isSaving = false;
+}
+
+function renderBoComments() {
+  const list = document.getElementById('bo-comments-list');
+  if (comments.length === 0) {
+    list.innerHTML = '<p style="color:var(--muted)">Aucun commentaire.</p>';
+    return;
+  }
+  list.innerHTML = comments.map(c => `
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:4px;padding:16px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
+      <div>
+        <div style="font-size:13px;font-weight:600;margin-bottom:6px">${escapeHtml(c.name)} · <span style="color:var(--muted)">${escapeHtml(c.date)}</span></div>
+        <div style="font-size:13px;color:${c.moderated ? 'var(--muted)' : 'var(--text)'};font-style:${c.moderated ? 'italic' : 'normal'}">${c.moderated ? '[Modéré]' : escapeHtml(c.text)}</div>
+      </div>
+      <button class="bo-btn bo-btn-delete" onclick="deleteComment(${c.id})">Suppr.</button>
+    </div>
+  `).join('');
+}
+
+function deleteComment(id) {
+  comments = comments.filter(c => c.id !== id);
+  saveData();
+  renderBoComments();
+  updateStats();
+  toast('🗑️ Commentaire supprimé');
+}
+
+function renderStats() { updateStats(); }
+
+// ════════════════════════════════════════════════════════════
+//  EDITOR UTILS
+// ════════════════════════════════════════════════════════════
+function updateWordCount() {
+  const body = document.getElementById('editor-body')?.value || '';
+  const words = body.trim().split(/\s+/).filter(Boolean).length;
+  const el = document.getElementById('word-count');
+  if (el) el.textContent = `${words} mot${words > 1 ? 's' : ''}`;
+}
+
+// ════════════════════════════════════════════════════════════
+//  IMAGES D'ARTICLE (import + compression auto)
+// ════════════════════════════════════════════════════════════
+let currentArticleImage = ''; // base64 de l'image en cours d'édition
+
+function handleImageUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  if (!file.type.startsWith('image/')) { toast('⚠️ Fichier image uniquement'); return; }
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    const img = new Image();
+    img.onload = () => {
+      // Redimensionne à max 1200px de large et compresse en JPEG ~0.82
+      const maxW = 1200;
+      const scale = Math.min(1, maxW / img.width);
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(img.width * scale);
+      canvas.height = Math.round(img.height * scale);
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      let dataUrl;
+      try {
+        dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+      } catch (err) {
+        dataUrl = e.target.result; // fallback
+      }
+      // Garde-fou taille (~2.5 Mo de base64 max)
+      if (dataUrl.length > 2600000) {
+        toast('⚠️ Image trop lourde même compressée, essaie-en une plus petite');
+        return;
+      }
+      currentArticleImage = dataUrl;
+      showImagePreview(dataUrl);
+      toast('✅ Image ajoutée');
+    };
+    img.onerror = () => toast('⚠️ Image illisible');
+    img.src = e.target.result;
+  };
+  reader.onerror = () => toast('⚠️ Lecture du fichier impossible');
+  reader.readAsDataURL(file);
+  event.target.value = ''; // permet de réimporter le même fichier
+}
+
+function showImagePreview(dataUrl) {
+  const preview = document.getElementById('image-preview');
+  const empty = document.getElementById('image-upload-empty');
+  const removeBtn = document.getElementById('image-remove-btn');
+  if (dataUrl) {
+    preview.src = dataUrl; preview.style.display = 'block';
+    empty.style.display = 'none';
+    removeBtn.style.display = 'block';
+  } else {
+    preview.style.display = 'none'; preview.removeAttribute('src');
+    empty.style.display = 'flex';
+    removeBtn.style.display = 'none';
+  }
+}
+
+function removeImage() {
+  currentArticleImage = '';
+  showImagePreview('');
+  toast('Image retirée');
+}
+
+// Rend le visuel d'un article : image réelle si dispo, sinon le fond PSG par défaut
+function articleImageHTML(a, variant) {
+  // variant: 'featured' | 'card' | 'full'
+  if (a && a.image) {
+    const cls = variant === 'featured' ? 'featured-image-placeholder'
+              : variant === 'card' ? 'article-card-image' : 'article-image-full';
+    return `<div class="${cls}" style="padding:0"><img src="${a.image}" alt="${escapeHtml(a.title)}" style="width:100%;height:100%;object-fit:cover;display:block"></div>`;
+  }
+  // Placeholder par défaut
+  if (variant === 'featured') return `<div class="featured-image-placeholder"><span class="img-placeholder-text">PSG</span></div>`;
+  if (variant === 'card') return `<div class="article-card-image"><span class="article-card-image-text">PSG</span></div>`;
+  return `<div class="article-image-full"><span class="article-image-full-text">PSG</span></div>`;
+}
+
+function formatText(cmd) {
+  const ta = document.getElementById('editor-body');
+  if (!ta) return;
+  const start = ta.selectionStart, end = ta.selectionEnd;
+  const selected = ta.value.slice(start, end);
+  if (!selected) { toast(currentLang === 'en' ? 'Select text first' : 'Sélectionne d\'abord du texte'); ta.focus(); return; }
+  const wrapped = cmd === 'bold' ? `**${selected}**` : `_${selected}_`;
+  ta.value = ta.value.slice(0, start) + wrapped + ta.value.slice(end);
+  ta.focus();
+  updateWordCount();
+}
+
+function insertQuote() {
+  const ta = document.getElementById('editor-body');
+  if (!ta) return;
+  const pos = ta.selectionStart;
+  const insert = '\n\n« … »\n\n';
+  ta.value = ta.value.slice(0, pos) + insert + ta.value.slice(pos);
+  ta.selectionStart = ta.selectionEnd = pos + 3;
+  ta.focus();
+}
+
+function insertSeparator() {
+  const ta = document.getElementById('editor-body');
+  if (!ta) return;
+  const pos = ta.selectionStart;
+  ta.value = ta.value.slice(0, pos) + '\n\n---\n\n' + ta.value.slice(pos);
+  updateWordCount();
+}
+
+// ════════════════════════════════════════════════════════════
+//  AI — DEEPWRITE
+// ════════════════════════════════════════════════════════════
+function selectAiMode(btn, mode) {
+  document.querySelectorAll('.ai-mode-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentAiMode = mode;
+  const placeholders = {
+    reformulate: 'Colle le texte à améliorer...',
+    titles: 'Résume l\'idée principale de ton article...',
+    analyse: 'Colle l\'info ou le tweet de l\'insider...',
+    translate: 'Colle le texte à traduire en anglais...',
+    intro: 'Donne le sujet et l\'angle de ton article...',
+    factcheck: 'Colle la rumeur ou l\'info à vérifier...'
+  };
+  document.getElementById('ai-prompt').placeholder = placeholders[mode];
+  document.getElementById('ai-result').classList.remove('visible');
+}
+
+async function runAI() {
+  const prompt = document.getElementById('ai-prompt').value.trim();
+  if (!prompt) { toast('⚠️ Ajoute du texte dans le champ IA'); return; }
+
+  const btn = document.getElementById('ai-run-btn');
+  btn.disabled = true;
+  btn.textContent = '⏳ En cours...';
+
+  const systemPrompts = {
+    reformulate: `Tu es un rédacteur expert pour PSGMagazine.com, le magazine des fans du PSG. Reformule le texte fourni pour le rendre plus fluide, percutant et journalistique. Garde les faits. Réponds uniquement avec le texte reformulé.`,
+    titles: `Tu es un rédacteur expert pour PSGMagazine.com. Propose 5 titres d'articles accrocheurs sur le sujet donné. Format : liste numérotée. Chaque titre doit être percutant, optimisé SEO, et adapté à un magazine foot.`,
+    analyse: `Tu es un analyste foot expert du PSG pour PSGMagazine.com. Analyse l'information fournie : identifie les angles éditoriaux, les questions à approfondir, les éléments de contexte. Structure ta réponse en 3 parties : Contexte, Angles éditoriaux, Questions à explorer.`,
+    translate: `Tu es traducteur expert pour PSGMagazine.com. Traduis le texte en anglais en gardant le ton journalistique et la passion foot. Réponds uniquement avec la traduction.`,
+    intro: `Tu es un rédacteur expert pour PSGMagazine.com. Rédige une accroche d'introduction percutante pour l'article décrit (3-4 phrases maximum). Le ton doit être celui d'un fan passionné mais rigoureux.`,
+    factcheck: `Tu es un journaliste fact-checker pour PSGMagazine.com. Pour l'info fournie, structure un guide de vérification : 1) Fiabilité de la source, 2) Éléments à confirmer, 3) Signaux d'alerte, 4) Sources à consulter. Sois précis et méthodique.`
+  };
+
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{
+          role: 'user',
+          content: `${systemPrompts[currentAiMode]}\n\n${prompt}`
+        }]
+      })
+    });
+    const data = await response.json();
+    const result = data.content?.[0]?.text || 'Erreur : réponse vide.';
+    document.getElementById('ai-result-text').textContent = result;
+    document.getElementById('ai-result').classList.add('visible');
+  } catch (e) {
+    document.getElementById('ai-result-text').textContent = 'Erreur de connexion. Vérifie ta connexion internet.';
+    document.getElementById('ai-result').classList.add('visible');
+  }
+
+  btn.disabled = false;
+  btn.innerHTML = '✨ Lancer DeepWrite';
+}
+
+function applyAI() {
+  const result = document.getElementById('ai-result-text').textContent;
+  const ta = document.getElementById('editor-body');
+  if (!ta || !result) return;
+  const current = ta.value;
+  ta.value = current ? current + '\n\n' + result : result;
+  updateWordCount();
+  toast('✅ Texte appliqué dans l\'éditeur !');
+}
+
+// ════════════════════════════════════════════════════════════
+//  INIT
+// ════════════════════════════════════════════════════════════
+function init() {
+  // Thème : restaure la préférence, sinon suit le système
+  let savedTheme = Store.get('psgmag_theme');
+  if (!savedTheme) {
+    savedTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  applyTheme(savedTheme);
+
+  // Date
+  const now = new Date();
+  document.getElementById('topbar-date').textContent = now.toLocaleDateString('fr-FR', {
+    weekday:'long', day:'numeric', month:'long', year:'numeric'
+  }).toUpperCase();
+
+  applyTranslations();
+  renderHome();
+  updateStats();
+  initCookieBanner();
+
+  // Scroll : progression de lecture + bouton retour en haut
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Raccourcis clavier : "/" ouvre la recherche, Échap ferme
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && !/input|textarea/i.test(document.activeElement.tagName)) {
+      e.preventDefault(); openSearch();
+    }
+    if (e.key === 'Escape') closeSearch();
+  });
+
+  // Permet d'activer le logo au clavier
+  document.querySelector('.site-logo')?.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') showPage('home');
+  });
+}
+
+// Lancement sécurisé : si une erreur survient à l'init, on log sans laisser un écran blanc
+try {
+  init();
+} catch (e) {
+  console.error('Erreur init:', e);
+  // Tentative de rendu minimal pour ne pas laisser la page vide
+  try { renderHome(); } catch (_) {}
+}
+</script>
+</body>
+</html>
