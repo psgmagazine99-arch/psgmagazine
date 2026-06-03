@@ -1834,6 +1834,66 @@ async function checkAdminSession() {
   } catch (e) { return false; }
 }
 
+// ════════════════════════════════════════════════════════════
+//  ARTICLES : BASE DE DONNÉES SUPABASE
+// ════════════════════════════════════════════════════════════
+// Conversion entre le format base (colonnes snake_case) et le format app (camelCase)
+function dbToApp(row) {
+  return {
+    id: row.id, title: row.title, titleEn: row.title_en || '',
+    content: row.content, contentEn: row.content_en || '',
+    excerpt: row.excerpt, excerptEn: row.excerpt_en || '',
+    category: row.category, reliability: row.reliability, source: row.source || '',
+    status: row.status, featured: !!row.featured, image: row.image || '',
+    author: row.author || 'Ayoub', date: row.date
+  };
+}
+function appToDb(a) {
+  return {
+    id: a.id, title: a.title, title_en: a.titleEn || '',
+    content: a.content, content_en: a.contentEn || '',
+    excerpt: a.excerpt, excerpt_en: a.excerptEn || '',
+    category: a.category, reliability: a.reliability, source: a.source || '',
+    status: a.status, featured: !!a.featured, image: a.image || '',
+    author: a.author || 'Ayoub', date: a.date
+  };
+}
+
+// Charge tous les articles depuis Supabase (pour TOUS les visiteurs)
+async function loadArticlesFromDB() {
+  if (!supa) return false;
+  try {
+    const { data, error } = await supa.from('articles').select('*').order('created_at', { ascending: false });
+    if (error) { console.warn('Lecture articles DB échouée:', error.message); return false; }
+    if (Array.isArray(data) && data.length > 0) {
+      articles = data.map(dbToApp);
+      return true;
+    }
+    return false; // base vide → on gardera les exemples
+  } catch (e) { console.warn('loadArticlesFromDB', e); return false; }
+}
+
+// Enregistre (crée ou met à jour) un article dans Supabase
+async function saveArticleToDB(a) {
+  if (!supa) return false;
+  try {
+    const { error } = await supa.from('articles').upsert(appToDb(a));
+    if (error) { console.warn('Écriture article DB échouée:', error.message); return false; }
+    return true;
+  } catch (e) { console.warn('saveArticleToDB', e); return false; }
+}
+
+// Supprime un article dans Supabase
+async function deleteArticleFromDB(id) {
+  if (!supa) return false;
+  try {
+    const { error } = await supa.from('articles').delete().eq('id', id);
+    if (error) { console.warn('Suppression article DB échouée:', error.message); return false; }
+    return true;
+  } catch (e) { console.warn('deleteArticleFromDB', e); return false; }
+}
+
+
 // Connexion : appelle Supabase qui vérifie email + mot de passe sur SON serveur
 async function doLogin() {
   const email = document.getElementById('login-email').value.trim();
@@ -3158,10 +3218,12 @@ function editArticle(id) {
   showBoSection('new-article');
 }
 
-function deleteArticle(id) {
+async function deleteArticle(id) {
+  if (!isAdmin) return; // sécurité : action réservée à l'admin connecté
   if (!confirm('Supprimer cet article ?')) return;
   articles = articles.filter(a => a.id !== id);
   saveData();
+  await deleteArticleFromDB(id); // suppression permanente dans la base
   renderBoArticles();
   renderStats();
   renderHome();
@@ -3244,6 +3306,7 @@ function cancelEdit() {
 }
 
 async function saveArticle(status) {
+  if (!isAdmin) return; // sécurité : publication réservée à l'admin connecté
   if (isSaving) return; // verrou anti double-clic (brouillon + publier)
   const title = document.getElementById('editor-title').value.trim();
   const content = document.getElementById('editor-body').value.trim();
@@ -3279,17 +3342,29 @@ async function saveArticle(status) {
 
   if (featured) articles.forEach(a => { a.featured = false; });
 
+  let savedArticle;
   if (editingArticleId) {
     const idx = articles.findIndex(a => a.id === editingArticleId);
     if (idx !== -1) {
       articles[idx] = { ...articles[idx], title, titleEn, content, contentEn, category, excerpt, excerptEn, featured, reliability, source, status, date, image: currentArticleImage };
+      savedArticle = articles[idx];
     }
     editingArticleId = null;
   } else {
-    articles.unshift({ id: Date.now(), title, titleEn, content, contentEn, category, excerpt, excerptEn, featured, reliability, source, status, date, author: 'Ayoub', image: currentArticleImage });
+    savedArticle = { id: Date.now(), title, titleEn, content, contentEn, category, excerpt, excerptEn, featured, reliability, source, status, date, author: 'Ayoub', image: currentArticleImage };
+    articles.unshift(savedArticle);
   }
 
   saveData();
+
+  // Enregistrement dans la base Supabase (permanent, visible par tous)
+  if (savedArticle) {
+    const ok = await saveArticleToDB(savedArticle);
+    // Si le featured a changé, on met à jour les autres articles en base (featured unique)
+    if (featured) { for (const a of articles) { if (a.id !== savedArticle.id) await saveArticleToDB(a); } }
+    if (!ok) toast('⚠️ Enregistré localement (base de données injoignable)');
+  }
+
   renderBoArticles();
   renderStats();
   renderHome();
@@ -3316,6 +3391,7 @@ function renderBoComments() {
 }
 
 function deleteComment(id) {
+  if (!isAdmin) return; // sécurité : modération réservée à l'admin connecté
   comments = comments.filter(c => c.id !== id);
   saveData();
   renderBoComments();
@@ -3524,6 +3600,11 @@ function init() {
   // Authentification : initialise Supabase et vérifie une éventuelle session
   initSupabase();
   checkAdminSession();
+
+  // Charge les articles depuis la base de données (visibles par tous les visiteurs)
+  loadArticlesFromDB().then(loaded => {
+    if (loaded) { renderHome(); updateStats(); }
+  });
 
   // Thème : restaure la préférence, sinon suit le système
   let savedTheme = Store.get('psgmag_theme');
